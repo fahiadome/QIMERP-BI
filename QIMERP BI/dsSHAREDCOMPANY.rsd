@@ -631,8 +631,12 @@
         <rd:TypeName>System.Boolean</rd:TypeName>
       </Field>
       <Field Name="ShowInvoiceMessagefooter">
-        <DataField>ShowInvoiceMessagefooter</DataField>
+        <DataField>ShowInvoiceMessageFooter</DataField>
         <rd:TypeName>System.Boolean</rd:TypeName>
+      </Field>
+      <Field Name="CompanyLogo">
+        <DataField>CompanyLogo</DataField>
+        <rd:TypeName>System.Byte[]</rd:TypeName>
       </Field>
     </Fields>
   </DataSet>

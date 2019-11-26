@@ -81,7 +81,7 @@ FROM
         <ReportItems>
           <Subreport Name="Header_Sub_Report">
             <ReportName>Header Subreport Landscape</ReportName>
-            <Height>0.46875in</Height>
+            <Height>0.33681in</Height>
             <Width>10.3125in</Width>
             <Style>
               <Border>
@@ -107,7 +107,7 @@ FROM
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>QIMERP:: Developed by: QFACE QROUP | www.qfacegroup.com| +233 543 459 509</Value>
+                      <Value>QIMERP:: Developed by: QFACE QROUP | www.qfacegroup.com | +233 543 459 509</Value>
                       <Style>
                         <FontStyle>Italic</FontStyle>
                         <FontFamily>Calibri</FontFamily>
@@ -122,6 +122,7 @@ FROM
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>0.03368in</Top>
+              <Left>0.05in</Left>
               <Height>0.23264in</Height>
               <Width>10.20833in</Width>
               <Style>

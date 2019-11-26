@@ -8,91 +8,124 @@
       <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>05e58855-7bdc-4555-acd0-12f7296fec77</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="dsGetInvoice">
+      <DataSourceReference>QIMERPDATA</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>03c63078-8425-4b56-974b-f1b65eb9f095</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DSMAIN">
+    <DataSet Name="dsGetInvoice">
       <Query>
-        <DataSourceName>QIMDATASOURCE</DataSourceName>
+        <DataSourceName>dsGetInvoice</DataSourceName>
         <QueryParameters>
-          <QueryParameter Name="@InvoiceNumber">
-            <Value>=Parameters!InvoiceNumber.Value</Value>
+          <QueryParameter Name="@InvoiceId">
+            <Value>=Parameters!InvoiceId.Value</Value>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>GetInvoiceWithBreakdownSp</CommandText>
+        <CommandText>ProcReportGetInvoice</CommandText>
       </Query>
       <Fields>
-        <Field Name="StreetAddress1">
-          <DataField>StreetAddress1</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="InvoiceId">
+          <DataField>InvoiceId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="EstimateId">
+          <DataField>EstimateId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
         <Field Name="CustomerName">
           <DataField>CustomerName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="PaymentType">
-          <DataField>PaymentType</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="StatusId">
+          <DataField>StatusId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Name">
-          <DataField>Name</DataField>
+        <Field Name="VoucherId">
+          <DataField>VoucherId</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="InvoiceNumber">
-          <DataField>InvoiceNumber</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
         <Field Name="ReferenceNumber">
           <DataField>ReferenceNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="CustomerCode">
-          <DataField>CustomerCode</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
+        <Field Name="WarehouseId">
+          <DataField>WarehouseId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PurchaseOrderId">
+          <DataField>PurchaseOrderId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ReceivableAccountId">
           <DataField>ReceivableAccountId</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="TaxCode">
-          <DataField>TaxCode</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="JobId">
+          <DataField>JobId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="TaxAccountCode">
-          <DataField>TaxAccountCode</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
+        <Field Name="CurrencyId">
+          <DataField>CurrencyId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="TaxRateValue">
-          <DataField>TaxRateValue</DataField>
+        <Field Name="BuyRate">
+          <DataField>BuyRate</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="VATValue">
-          <DataField>VATValue</DataField>
+        <Field Name="Balance">
+          <DataField>Balance</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="NHILValue">
-          <DataField>NHILValue</DataField>
+        <Field Name="LocalAmount">
+          <DataField>LocalAmount</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="InvoiceDate">
           <DataField>InvoiceDate</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
+        <Field Name="LocalBalance">
+          <DataField>LocalBalance</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
         <Field Name="DueDate">
           <DataField>DueDate</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
+        <Field Name="BatchNumber">
+          <DataField>BatchNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ShipMethodId">
           <DataField>ShipMethodId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AccountingPeriod">
+          <DataField>AccountingPeriod</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="ShipDate">
           <DataField>ShipDate</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
+        <Field Name="ClosedDate">
+          <DataField>ClosedDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="SubGroupId">
+          <DataField>SubGroupId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
         <Field Name="Memo">
           <DataField>Memo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BankId">
+          <DataField>BankId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="Amount">
           <DataField>Amount</DataField>
@@ -102,9 +135,21 @@
           <DataField>CustomerMessageId</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="BranchId">
+          <DataField>BranchId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ChequeDate">
+          <DataField>ChequeDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
         <Field Name="PaymentTermId">
           <DataField>PaymentTermId</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CustomerId">
+          <DataField>CustomerId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
         <Field Name="SalesRepStaffId">
           <DataField>SalesRepStaffId</DataField>
@@ -117,14 +162,6 @@
         <Field Name="IsToBeEmailed">
           <DataField>IsToBeEmailed</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="SaleDiscountId">
-          <DataField>SaleDiscountId</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="SuggestedDiscountValue">
-          <DataField>SuggestedDiscountValue</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="ShipToAddressNote">
           <DataField>ShipToAddressNote</DataField>
@@ -214,58 +251,78 @@
           <DataField>PostMemo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ItemId">
-          <DataField>ItemId</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
-        </Field>
-        <Field Name="Description">
-          <DataField>Description</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="UnitPrice">
-          <DataField>UnitPrice</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="Quantity">
-          <DataField>Quantity</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="ServiceDate">
-          <DataField>ServiceDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
         <Field Name="LineTotal">
           <Value>=Fields!Quantity.Value*Fields!UnitPrice.Value</Value>
+        </Field>
+        <Field Name="Warehouse">
+          <DataField>Warehouse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LocationId">
+          <DataField>LocationId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CustomerFullName">
+          <DataField>CustomerFullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AccountNumber">
+          <DataField>AccountNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrimaryPhone">
+          <DataField>PrimaryPhone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Website">
+          <DataField>Website</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OtherPhone">
+          <DataField>OtherPhone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Fax">
+          <DataField>Fax</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
     <DataSet Name="DSCOMPANY">
       <SharedDataSet>
-        <SharedDataSetReference>COMPANY DATASETS</SharedDataSetReference>
+        <SharedDataSetReference>dsSHAREDCOMPANY</SharedDataSetReference>
       </SharedDataSet>
       <Fields>
         <Field Name="CompanyId">
           <DataField>CompanyId</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="Name">
           <DataField>Name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Address">
-          <DataField>Address</DataField>
+        <Field Name="AddressLine1">
+          <DataField>AddressLine1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AddressLine2">
+          <DataField>AddressLine2</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="CountryId">
           <DataField>CountryId</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="PhoneNumber">
-          <DataField>PhoneNumber</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="CityId">
+          <DataField>CityId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Telephone">
-          <DataField>Telephone</DataField>
+        <Field Name="DBA">
+          <DataField>DBA</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Email">
@@ -276,33 +333,601 @@
           <DataField>Website</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="LegelName">
-          <DataField>LegelName</DataField>
+        <Field Name="CompanyNumber">
+          <DataField>CompanyNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="LegelAddress">
-          <DataField>LegelAddress</DataField>
+        <Field Name="EmployerSSN">
+          <DataField>EmployerSSN</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="LegalCountryId">
-          <DataField>LegalCountryId</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="LegelRegionId">
-          <DataField>LegelRegionId</DataField>
+        <Field Name="CurrencyId">
+          <DataField>CurrencyId</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="RegistrationNumber">
-          <DataField>RegistrationNumber</DataField>
+        <Field Name="Voice">
+          <DataField>Voice</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="SSNITNumber">
-          <DataField>SSNITNumber</DataField>
+        <Field Name="Fax">
+          <DataField>Fax</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Slogan">
-          <DataField>Slogan</DataField>
+        <Field Name="Modem">
+          <DataField>Modem</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsGhanaVersion">
+          <DataField>IsGhanaVersion</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="IsMultiDepartment">
+          <DataField>IsMultiDepartment</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="VATRate">
+          <DataField>VATRate</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="ConsolidateTimeSheet">
+          <DataField>ConsolidateTimeSheet</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="OrganizationalUnitId">
+          <DataField>OrganizationalUnitId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FirstMonthOfFiscalYear">
+          <DataField>FirstMonthOfFiscalYear</DataField>
+          <rd:TypeName>System.Int16</rd:TypeName>
+        </Field>
+        <Field Name="StockCurrencyId">
+          <DataField>StockCurrencyId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Zip">
+          <DataField>Zip</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VATNumber">
+          <DataField>VATNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NHILRate">
+          <DataField>NHILRate</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EnforceOUSecurity">
+          <DataField>EnforceOUSecurity</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="IncludeVAT">
+          <DataField>IncludeVAT</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ContactPerson">
+          <DataField>ContactPerson</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Notes">
+          <DataField>Notes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DefaultARGL">
+          <DataField>DefaultARGL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CurrentUser">
+          <DataField>CurrentUser</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CompName">
+          <DataField>CompName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BillStaffId">
+          <DataField>BillStaffId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ForeignCurrencyId">
+          <DataField>ForeignCurrencyId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BankGLid">
+          <DataField>BankGLid</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RevenueGLd">
+          <DataField>RevenueGLd</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ARGLid">
+          <DataField>ARGLid</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RetireAge">
+          <DataField>RetireAge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CompulsoryAge">
+          <DataField>CompulsoryAge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="VoluntaryAge">
+          <DataField>VoluntaryAge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MonthsToCompulsaryRtm">
+          <DataField>MonthsToCompulsaryRtm</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PercentAccessible">
+          <DataField>PercentAccessible</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="InterestPerAnnum">
+          <DataField>InterestPerAnnum</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ShowGLNo">
+          <DataField>ShowGLNo</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ShowReportHeaderAR">
+          <DataField>ShowReportHeaderAR</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="IncludeCompanyLogoOnReportAR">
+          <DataField>IncludeCompanyLogoOnReportAR</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ShowReportHeaderAP">
+          <DataField>ShowReportHeaderAP</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="IncludeCompanyLogoOnReportAP">
+          <DataField>IncludeCompanyLogoOnReportAP</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ARPaymentDesc">
+          <DataField>ARPaymentDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SMTPServerName">
+          <DataField>SMTPServerName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SMTPServerIP">
+          <DataField>SMTPServerIP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowInvoiceMessage">
+          <DataField>ShowInvoiceMessage</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="InvoiceMessage">
+          <DataField>InvoiceMessage</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowQuotationMessage">
+          <DataField>ShowQuotationMessage</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="QuotationMessage">
+          <DataField>QuotationMessage</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ConsolidateVoucher">
+          <DataField>ConsolidateVoucher</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ConsolidateHWC">
+          <DataField>ConsolidateHWC</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EmployeePF">
+          <DataField>EmployeePF</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EmployerPF">
+          <DataField>EmployerPF</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EmployeeSA">
+          <DataField>EmployeeSA</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EmployerSA">
+          <DataField>EmployerSA</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="TreatPFasSSF">
+          <DataField>TreatPFasSSF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TreatSAasSSF">
+          <DataField>TreatSAasSSF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TreatSecPFasSSF">
+          <DataField>TreatSecPFasSSF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PaySSF">
+          <DataField>PaySSF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PayPF">
+          <DataField>PayPF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PaySecPF">
+          <DataField>PaySecPF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PaySA">
+          <DataField>PaySA</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TaxEmployerSSF">
+          <DataField>TaxEmployerSSF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TaxEmployerPF">
+          <DataField>TaxEmployerPF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TaxEmployerSecPF">
+          <DataField>TaxEmployerSecPF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TaxEmployerSA">
+          <DataField>TaxEmployerSA</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="LocationId">
+          <DataField>LocationId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OrderBatchNos">
+          <DataField>OrderBatchNos</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="VoucherTxt1">
+          <DataField>VoucherTxt1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VoucherTxt2">
+          <DataField>VoucherTxt2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VoucherTxt3">
+          <DataField>VoucherTxt3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowARHomePage">
+          <DataField>ShowARHomePage</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ShowAPHomePage">
+          <DataField>ShowAPHomePage</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="AddInterestCharded">
+          <DataField>AddInterestCharded</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ReadMailReceipt">
+          <DataField>ReadMailReceipt</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="MailServerRequiresAuthentication">
+          <DataField>MailServerRequiresAuthentication</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="UnionName">
+          <DataField>UnionName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VoucherTxt4">
+          <DataField>VoucherTxt4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VoucherTxt5">
+          <DataField>VoucherTxt5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ConcatinateClassName">
+          <DataField>ConcatinateClassName</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="WHRate">
+          <DataField>WHRate</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ConcatinateName">
+          <DataField>ConcatinateName</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Redenomed">
+          <DataField>Redenomed</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="AllocateTaxSalary">
+          <DataField>AllocateTaxSalary</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="SortPayrollReportByID">
+          <DataField>SortPayrollReportByID</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EmployeeSecPF">
+          <DataField>EmployeeSecPF</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EmployerSecPF">
+          <DataField>EmployerSecPF</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="UseCheckBook">
+          <DataField>UseCheckBook</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PRRedenomed">
+          <DataField>PRRedenomed</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EnforceOU">
+          <DataField>EnforceOU</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ChurchRedenomined">
+          <DataField>ChurchRedenomined</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ARSignature">
+          <DataField>ARSignature</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="ARAuthority">
+          <DataField>ARAuthority</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ARAuthorityPositionID">
+          <DataField>ARAuthorityPositionID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FARedenomined">
+          <DataField>FARedenomined</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ARRedenomed">
+          <DataField>ARRedenomed</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="APRedenomed">
+          <DataField>APRedenomed</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="SPRedenomined">
+          <DataField>SPRedenomined</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="HSRedenomined">
+          <DataField>HSRedenomined</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="SMRedenomied">
+          <DataField>SMRedenomied</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="GLSubD">
+          <DataField>GLSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PRSubD">
+          <DataField>PRSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ARSubD">
+          <DataField>ARSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="APSubD">
+          <DataField>APSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FASubD">
+          <DataField>FASubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SPSubD">
+          <DataField>SPSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HSSubD">
+          <DataField>HSSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SMSubD">
+          <DataField>SMSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LNSubD">
+          <DataField>LNSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AddQuotationVAT">
+          <DataField>AddQuotationVAT</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CMSSubD">
+          <DataField>CMSSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StartDepreciationFromFirstFiscalMonth">
+          <DataField>StartDepreciationFromFirstFiscalMonth</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ShowPayout">
+          <DataField>ShowPayout</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TradeUnionID">
+          <DataField>TradeUnionID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OTPercOnBasic">
+          <DataField>OTPercOnBasic</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="OTPercOnDaily">
+          <DataField>OTPercOnDaily</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="RFX">
+          <DataField>RFX</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CMethod">
+          <DataField>CMethod</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RWarehouse">
+          <DataField>RWarehouse</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="LastFiscalPeriod">
+          <DataField>LastFiscalPeriod</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ContributionType">
+          <DataField>ContributionType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ExcludeAllowanceForBackPay">
+          <DataField>ExcludeAllowanceForBackPay</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Signatory1">
+          <DataField>Signatory1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Signatory2">
+          <DataField>Signatory2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Signatory3">
+          <DataField>Signatory3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Signatory4">
+          <DataField>Signatory4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Signatory5">
+          <DataField>Signatory5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SelectAccountByCode">
+          <DataField>SelectAccountByCode</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="MailServerUserName">
+          <DataField>MailServerUserName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MailServerPassword">
+          <DataField>MailServerPassword</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SenderName">
+          <DataField>SenderName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SenderEmailAddress">
+          <DataField>SenderEmailAddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PortNo">
+          <DataField>PortNo</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Auditories1">
+          <DataField>Auditories1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Auditories2">
+          <DataField>Auditories2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Auditories3">
+          <DataField>Auditories3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowAuditories">
+          <DataField>ShowAuditories</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="AccountName1">
+          <DataField>AccountName1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AccountName2">
+          <DataField>AccountName2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BankName1">
+          <DataField>BankName1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BranchName1">
+          <DataField>BranchName1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SWIFTCODE1">
+          <DataField>SWIFTCODE1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Currency1">
+          <DataField>Currency1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AccountName3">
+          <DataField>AccountName3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AccountName4">
+          <DataField>AccountName4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BankName2">
+          <DataField>BankName2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BranchName2">
+          <DataField>BranchName2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SWIFTCODE2">
+          <DataField>SWIFTCODE2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Currency2">
+          <DataField>Currency2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Chkno">
+          <DataField>Chkno</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ShowInvoiceMessagefooter">
+          <DataField>ShowInvoiceMessagefooter</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CompanyLogo">
+          <DataField>CompanyLogo</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
@@ -616,14 +1241,14 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Quantity">
+                        <Textbox Name="Textbox4">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Quantity.Value</Value>
+                                  <Value />
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -635,7 +1260,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Quantity</rd:DefaultName>
+                          <rd:DefaultName>Textbox4</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -670,14 +1295,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="ItemId">
+                        <Textbox Name="Textbox2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!ItemId.Value</Value>
+                                  <Value />
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -689,7 +1314,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>ItemId</rd:DefaultName>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -724,14 +1349,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Name">
+                        <Textbox Name="Textbox6">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Name.Value</Value>
+                                  <Value />
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -741,7 +1366,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Name</rd:DefaultName>
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -776,18 +1401,17 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="UnitPrice">
+                        <Textbox Name="Textbox8">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!UnitPrice.Value</Value>
+                                  <Value />
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
-                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -796,7 +1420,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>UnitPrice</rd:DefaultName>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -831,18 +1455,17 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="LineTotal">
+                        <Textbox Name="Textbox21">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!LineTotal.Value</Value>
+                                  <Value />
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
-                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -851,7 +1474,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>LineTotal</rd:DefaultName>
+                          <rd:DefaultName>Textbox21</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -1025,18 +1648,17 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox12">
+                        <Textbox Name="Textbox23">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!LineTotal.Value)</Value>
+                                  <Value />
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
-                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1045,7 +1667,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox12</rd:DefaultName>
+                          <rd:DefaultName>Textbox23</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -1219,14 +1841,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox16">
+                        <Textbox Name="Textbox32">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>0.00</Value>
+                                  <Value />
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -1238,7 +1860,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox16</rd:DefaultName>
+                          <rd:DefaultName>Textbox32</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -1412,18 +2034,17 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox20">
+                        <Textbox Name="Textbox25">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!LineTotal.Value)</Value>
+                                  <Value />
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
-                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1432,7 +2053,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox20</rd:DefaultName>
+                          <rd:DefaultName>Textbox25</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -1497,7 +2118,7 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DSMAIN</DataSetName>
+            <DataSetName>dsGetInvoice</DataSetName>
             <Top>2.76958in</Top>
             <Height>1.25in</Height>
             <Width>7.48736in</Width>
@@ -1812,14 +2433,14 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox32">
+                        <Textbox Name="Textbox31">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Nobert K. Mensah</Value>
+                                  <Value />
                                   <Style>
                                     <FontFamily>calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -1831,7 +2452,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox32</rd:DefaultName>
+                          <rd:DefaultName>Textbox31</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -1974,7 +2595,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox35">
+                        <Textbox Name="Textbox27">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1993,7 +2614,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox35</rd:DefaultName>
+                          <rd:DefaultName>Textbox27</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -2028,14 +2649,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox36">
+                        <Textbox Name="Textbox29">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!PaymentType.Value</Value>
+                                  <Value />
                                   <Style>
                                     <FontFamily>calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -2047,7 +2668,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox36</rd:DefaultName>
+                          <rd:DefaultName>Textbox29</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -2099,7 +2720,7 @@
                 <TablixMember />
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DSMAIN</DataSetName>
+            <DataSetName>dsGetInvoice</DataSetName>
             <Top>2.14458in</Top>
             <Height>0.5in</Height>
             <Width>7.48735in</Width>
@@ -2235,7 +2856,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Label>COMPANY NAME</Label>
-                                  <Value>=UCase(Fields!Name.Value)</Value>
+                                  <Value>=UCase(First(Fields!Name.Value))</Value>
                                   <Style>
                                     <FontFamily>calibri</FontFamily>
                                     <FontSize>14pt</FontSize>
@@ -2249,7 +2870,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Label>Company Slogan</Label>
-                                  <Value>=Fields!Slogan.Value</Value>
+                                  <Value>=First(Fields!CompanyLogo.Value, "DSCOMPANY")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>calibri</FontFamily>
@@ -2322,7 +2943,7 @@
                                 </TextRun>
                                 <TextRun>
                                   <Label>INVOICENUMBER</Label>
-                                  <Value>=First(Fields!InvoiceNumber.Value, "DSMAIN")</Value>
+                                  <Value>=First(Fields!InvoiceId.Value, "dsGetInvoice")</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -2402,7 +3023,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Label>Customer Name</Label>
-                                  <Value>=First(Fields!CustomerName.Value, "DSMAIN")</Value>
+                                  <Value>= First(Fields!CustomerFullName.Value, "dsGetInvoice")</Value>
                                   <Style>
                                     <FontStyle>Normal</FontStyle>
                                     <FontFamily>Calibri</FontFamily>
@@ -2419,7 +3040,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Label>Street Address</Label>
-                                  <Value>=First(Fields!StreetAddress1.Value, "DSMAIN")</Value>
+                                  <Value>=First(Fields!BillToAddressCity.Value, "dsGetInvoice")</Value>
                                   <Style>
                                     <FontStyle>Normal</FontStyle>
                                     <FontFamily>Calibri</FontFamily>
@@ -2457,6 +3078,19 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>SHIP TO:</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Label>ShipToAddress</Label>
+                                  <Value>=First(Fields!ShipToAddressStreetAddress1.Value, "dsGetInvoice")</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -2888,6 +3522,10 @@
       </DefaultValue>
       <Prompt>Invoice Number</Prompt>
     </ReportParameter>
+    <ReportParameter Name="InvoiceId">
+      <DataType>Integer</DataType>
+      <Prompt>Invoice Id</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -2898,6 +3536,11 @@
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
           <ParameterName>InvoiceNumber</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>InvoiceId</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

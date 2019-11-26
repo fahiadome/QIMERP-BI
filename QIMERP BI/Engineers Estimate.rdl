@@ -2273,7 +2273,7 @@ FROM
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.67708in</Height>
+                  <Height>0.48264in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -3027,7 +3027,7 @@ FROM
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.64583in</Height>
+                  <Height>0.55555in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -3150,7 +3150,7 @@ FROM
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.85417in</Height>
+                  <Height>0.625in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -3509,7 +3509,7 @@ FROM
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>OFFICIAL CAPACITY:..............................................................................................................................</Value>
+                                  <Value>OFFICIAL CAPACITY:.............................................................................................................................</Value>
                                   <Style>
                                     <FontFamily>calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -3581,7 +3581,7 @@ FROM
             </TablixRowHierarchy>
             <DataSetName>dsStoreRequisition</DataSetName>
             <Left>0.075in</Left>
-            <Height>8.94792in</Height>
+            <Height>8.43403in</Height>
             <Width>5.11458in</Width>
             <Style>
               <Border>
@@ -3590,13 +3590,13 @@ FROM
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>8.94792in</Height>
+        <Height>8.60764in</Height>
         <Style />
       </Body>
       <Width>5.18958in</Width>
       <Page>
         <PageFooter>
-          <Height>0.32292in</Height>
+          <Height>0.25348in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -3607,7 +3607,7 @@ FROM
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>QIMERP:: Developed by: QFACE QROUP | www.qfacegroup.com| +233 543 459 509</Value>
+                      <Value>QIMERP:: Developed by: QFACE QROUP | www.qfacegroup.com | +233 543 459 509</Value>
                       <Style>
                         <FontStyle>Italic</FontStyle>
                         <FontFamily>Calibri</FontFamily>
@@ -3621,7 +3621,6 @@ FROM
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.06944in</Top>
               <Height>0.25348in</Height>
               <Width>5.13749in</Width>
               <Style>
@@ -3654,7 +3653,7 @@ FROM
   <ReportParameters>
     <ReportParameter Name="EstimateId">
       <DataType>Integer</DataType>
-      <Prompt>Enter Estimate ID</Prompt>
+      <Prompt>Enter Requisition ID</Prompt>
     </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
