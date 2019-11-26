@@ -1,0 +1,2117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="QIMERPDATA">
+      <DataSourceReference>QIMERPDATA</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>49c76748-d19c-49e0-8b61-5c5cffde356f</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="dsGetStaffProfile">
+      <SharedDataSet>
+        <SharedDataSetReference>dsStaffHeader</SharedDataSetReference>
+        <QueryParameters>
+          <QueryParameter Name="@staffId">
+            <Value>=Parameters!staffId.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="SalaryGradeId">
+          <DataField>SalaryGradeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SalaryNotchId">
+          <DataField>SalaryNotchId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Grade">
+          <DataField>Grade</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Notch">
+          <DataField>Notch</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Designation">
+          <DataField>Designation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DesignationId">
+          <DataField>DesignationId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OrganizationalUnit">
+          <DataField>OrganizationalUnit</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrganizationalUnitId">
+          <DataField>OrganizationalUnitId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="JobTitle">
+          <DataField>JobTitle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="JobTitleId">
+          <DataField>JobTitleId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Location">
+          <DataField>Location</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LocationId">
+          <DataField>LocationId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Status">
+          <DataField>Status</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StaffId">
+          <DataField>StaffId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="SuffixId">
+          <DataField>SuffixId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Suffix">
+          <DataField>Suffix</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StaffNumber">
+          <DataField>StaffNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SalutationId">
+          <DataField>SalutationId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Salutation">
+          <DataField>Salutation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EthnicGroupId">
+          <DataField>EthnicGroupId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ControllerAccountantGeneralId">
+          <DataField>ControllerAccountantGeneralId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="DisabilityId">
+          <DataField>DisabilityId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RegionId">
+          <DataField>RegionId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NationalityAcquiredTypeId">
+          <DataField>NationalityAcquiredTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FirstName">
+          <DataField>FirstName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Surname">
+          <DataField>Surname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MiddleName">
+          <DataField>MiddleName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GenderId">
+          <DataField>GenderId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateOfBirth">
+          <DataField>DateOfBirth</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PlaceOfBirthCityId">
+          <DataField>PlaceOfBirthCityId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PlaceOfBirth">
+          <DataField>PlaceOfBirth</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HomeTownCityId">
+          <DataField>HomeTownCityId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="HomeTown">
+          <DataField>HomeTown</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateOfEmployment">
+          <DataField>DateOfEmployment</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ResidentialAddress1">
+          <DataField>ResidentialAddress1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ResidentialAddress2">
+          <DataField>ResidentialAddress2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ResidentialAddress3">
+          <DataField>ResidentialAddress3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ResidentialAddress4">
+          <DataField>ResidentialAddress4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AddressLine1">
+          <DataField>AddressLine1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AddressLine2">
+          <DataField>AddressLine2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AddressLine3">
+          <DataField>AddressLine3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AddressLine4">
+          <DataField>AddressLine4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DistrictId">
+          <DataField>DistrictId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CityId">
+          <DataField>CityId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Weight">
+          <DataField>Weight</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Height">
+          <DataField>Height</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TINNumber">
+          <DataField>TINNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NHILNumber">
+          <DataField>NHILNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VotersIdNumber">
+          <DataField>VotersIdNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PassportNumber">
+          <DataField>PassportNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SSNITNumber">
+          <DataField>SSNITNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PassportIssueDate">
+          <DataField>PassportIssueDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PassportExpiryDate">
+          <DataField>PassportExpiryDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="DriverLicence">
+          <DataField>DriverLicence</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LicenceIssueDate">
+          <DataField>LicenceIssueDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="LicenceExpiryDate">
+          <DataField>LicenceExpiryDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="BloodGroupId">
+          <DataField>BloodGroupId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CountryId">
+          <DataField>CountryId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MaritalStatusId">
+          <DataField>MaritalStatusId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BankId">
+          <DataField>BankId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Bank">
+          <DataField>Bank</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AccountBranchId">
+          <DataField>AccountBranchId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AccountName">
+          <DataField>AccountName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BankAccountNumber">
+          <DataField>BankAccountNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrimaryPhone">
+          <DataField>PrimaryPhone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OtherPhone">
+          <DataField>OtherPhone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MotherName">
+          <DataField>MotherName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MotherBirthDate">
+          <DataField>MotherBirthDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="MotherStatus">
+          <DataField>MotherStatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FatherName">
+          <DataField>FatherName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FatherBirthDate">
+          <DataField>FatherBirthDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="FatherStatus">
+          <DataField>FatherStatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReligionId">
+          <DataField>ReligionId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DenominationId">
+          <DataField>DenominationId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PayPeriodId">
+          <DataField>PayPeriodId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SpouseName">
+          <DataField>SpouseName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MarriageDate">
+          <DataField>MarriageDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Website">
+          <DataField>Website</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StatusId">
+          <DataField>StatusId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IsDeleted">
+          <DataField>IsDeleted</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="AppointmentDate">
+          <DataField>AppointmentDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ConfirmationDate">
+          <DataField>ConfirmationDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="RetirementDate">
+          <DataField>RetirementDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="RetirementAge">
+          <DataField>RetirementAge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ContractExpirationDate">
+          <DataField>ContractExpirationDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="StaffFullName">
+          <DataField>StaffFullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StaffFullNameV2">
+          <DataField>StaffFullNameV2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodePrefix">
+          <DataField>CodePrefix</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsExemptedTaxOnSalary">
+          <DataField>IsExemptedTaxOnSalary</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CurrencyId">
+          <DataField>CurrencyId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SalaryTypeId">
+          <DataField>SalaryTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ExpenseGLAccountId">
+          <DataField>ExpenseGLAccountId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="LiabilityGLAccountId">
+          <DataField>LiabilityGLAccountId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="TaxLiabilityGLAccountId">
+          <DataField>TaxLiabilityGLAccountId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="DailyHours">
+          <DataField>DailyHours</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PayTypeId">
+          <DataField>PayTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SSFExpenseGLAccountId">
+          <DataField>SSFExpenseGLAccountId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SSFLiabilityGLAccountId">
+          <DataField>SSFLiabilityGLAccountId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProvidentFundExpenseGLAccountId">
+          <DataField>ProvidentFundExpenseGLAccountId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProvidentFundLiabilityGLAccountId">
+          <DataField>ProvidentFundLiabilityGLAccountId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EmployerSSFExpenseGLAccountId">
+          <DataField>EmployerSSFExpenseGLAccountId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EmployerSSFLiabilityGLAccountId">
+          <DataField>EmployerSSFLiabilityGLAccountId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EmployerSuperAnnuationGLAccountId">
+          <DataField>EmployerSuperAnnuationGLAccountId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EmployeeProvidentFundExpenseGLAccountId">
+          <DataField>EmployeeProvidentFundExpenseGLAccountId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EmployerProvidentFundLiabilityGLAccountId">
+          <DataField>EmployerProvidentFundLiabilityGLAccountId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EmployeeSuperAnnuationLiabilityGLAccountId">
+          <DataField>EmployeeSuperAnnuationLiabilityGLAccountId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EmployerSuperAnnuationLiabilityGLAccountId">
+          <DataField>EmployerSuperAnnuationLiabilityGLAccountId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SuperAnnuationGLAccountId">
+          <DataField>SuperAnnuationGLAccountId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NumberOfYears">
+          <DataField>NumberOfYears</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NumberOfYearsCounts">
+          <DataField>NumberOfYearsCounts</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="YearOfAppointment">
+          <DataField>YearOfAppointment</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AgeRange">
+          <DataField>AgeRange</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Label>StaffName</Label>
+                    <Value>=First(Fields!StaffFullName.Value, "dsGetStaffProfile")</Value>
+                    <Style>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>16pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Label>StaffJobTitle</Label>
+                    <Value>=First(Fields!JobTitle.Value, "dsGetStaffProfile")</Value>
+                    <Style>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Label>StaffDepartment</Label>
+                    <Value>="Department of Mineral Engineering"</Value>
+                    <Style>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Label>StaffAddressLine1</Label>
+                    <Value>=First(Fields!AddressLine1.Value, "dsGetStaffProfile")</Value>
+                    <Style>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Label>StaffAddressLine2</Label>
+                    <Value>=First(Fields!AddressLine2.Value, "dsGetStaffProfile")</Value>
+                    <Style>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Label>StaffEmail</Label>
+                    <Value>=First(Fields!Email.Value, "dsGetStaffProfile")</Value>
+                    <Style>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Label>StaffTelephone</Label>
+                    <Value>=First(Fields!PrimaryPhone.Value, "dsGetStaffProfile")</Value>
+                    <Style>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Left>1.04792in</Left>
+            <Height>1.0625in</Height>
+            <Width>6.7554in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Image Name="Image2">
+            <Source>Embedded</Source>
+            <Value>user1</Value>
+            <Sizing>Fit</Sizing>
+            <Height>1.0625in</Height>
+            <Width>1.02431in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+          <Line Name="Line1">
+            <Top>1.12375in</Top>
+            <Height>0in</Height>
+            <Width>7.80332in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>2.25pt</Width>
+              </Border>
+              <TopBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>2.25pt</Width>
+              </TopBorder>
+              <BottomBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>2.25pt</Width>
+              </BottomBorder>
+              <LeftBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>2.25pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>2.25pt</Width>
+              </RightBorder>
+            </Style>
+          </Line>
+          <Line Name="Line2">
+            <Top>1.0875in</Top>
+            <Height>0in</Height>
+            <Width>7.80332in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <TopBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </TopBorder>
+              <BottomBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </BottomBorder>
+              <LeftBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </RightBorder>
+            </Style>
+          </Line>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.593in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.593in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.593in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.27058in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox8">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Academic Degrees Earned</Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25514in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Tablix Name="Tablix3">
+                          <TablixBody>
+                            <TablixColumns>
+                              <TablixColumn>
+                                <Width>7.77901in</Width>
+                              </TablixColumn>
+                            </TablixColumns>
+                            <TablixRows>
+                              <TablixRow>
+                                <Height>0.25514in</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox24">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Label>AcademicDegrees</Label>
+                                                <Value>="PhD, Biohydrometallurgy (Queen's University), 2005"</Value>
+                                                <Style>
+                                                  <FontFamily>times New Roman</FontFamily>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox24</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>None</Style>
+                                          </Border>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                            </TablixRows>
+                          </TablixBody>
+                          <TablixColumnHierarchy>
+                            <TablixMembers>
+                              <TablixMember />
+                            </TablixMembers>
+                          </TablixColumnHierarchy>
+                          <TablixRowHierarchy>
+                            <TablixMembers>
+                              <TablixMember>
+                                <Group Name="Details" />
+                              </TablixMember>
+                            </TablixMembers>
+                          </TablixRowHierarchy>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Tablix>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.23457in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox20">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Institutions Attended</Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox20</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.23328in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Tablix Name="Tablix4">
+                          <TablixBody>
+                            <TablixColumns>
+                              <TablixColumn>
+                                <Width>7.77901in</Width>
+                              </TablixColumn>
+                            </TablixColumns>
+                            <TablixRows>
+                              <TablixRow>
+                                <Height>0.23328in</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox30">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Label>InstitutionsAttended</Label>
+                                                <Value>="Kwame Nkrumah University of Science and Technology, (1991 - 1993)"</Value>
+                                                <Style>
+                                                  <FontFamily>times New Roman</FontFamily>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox30</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>None</Style>
+                                          </Border>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                            </TablixRows>
+                          </TablixBody>
+                          <TablixColumnHierarchy>
+                            <TablixMembers>
+                              <TablixMember />
+                            </TablixMembers>
+                          </TablixColumnHierarchy>
+                          <TablixRowHierarchy>
+                            <TablixMembers>
+                              <TablixMember>
+                                <Group Name="Details1" />
+                              </TablixMember>
+                            </TablixMembers>
+                          </TablixRowHierarchy>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Tablix>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.27315in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox35">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Profesional Body Membership</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox35</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.42735in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox38">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Member, Ghana Institution of Engineers, (2008 - Date)
+Member, Society for Mining, Metallurgical and Petroleum Engineers, USA, (1997 - Date)</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox38</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox41">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Awards</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox41</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.60985in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox44">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Lecturer Icon of the year 2011, an award given by the Students Representative Council, UMaT, Tarkwa, Ghana, 2011
+Ontario Graduate Scholar, 2003
+Paul Chick Award (a promising graduate student in Queen's Mining) 2001-2004, 2001</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox44</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox50">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Academic Ranks Held</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox50</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.7803in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox47">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Professor (2011 - Date)
+Associate Professor (2006 - 2011)
+Senior Lecturer (1999 - 2006)
+Lecturer (1993 - 1999)</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox47</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox65">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Subjects Taught</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox65</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.64366in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox68">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Hydrometallurgy
+Plant Design
+Assaying and Metallurgical Testing</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox68</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox62">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Supervision of Students Project Work/Thesis/Research</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox62</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.49053in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox59">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>20 Postgraduate Project Thesis, (MSc/MPhil)
+110 Undergraduate Project Works, (BSc)</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox59</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox56">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Other Professionally Related Experience</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox56</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.67046in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox53">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Lead Country Researcher - United Nations project on Women in Artisanal and Small-scale in Africa Project.
+Investigator - International Growth Centre, UK, research project on ‘Informalisation’ of Ghana’s Small-Scale Gold Mining Economy: Drivers and Policy Implications.</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox53</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox74">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Rearch Conducted</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox74</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.50568in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox71">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Water quality studies in the buruli ulcer endemic and non-endemic areas along the Offin River
+An inventory of the the metal sorption capabilities of common plants in Ghanaian wetlands (2008 - date)</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox71</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox77">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Journal Publications</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox77</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>1in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox83">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Amorin, R, Dosumnu, A and Amankwah, R K (2015). Economic viability of the use of pseudo-oils for drilling fluid formulation. Ghana Mining Journal, 15, 2, 81-86. 
+Mantey, S. Amankwah, R. K. and Duker, A. A. (2014), "Spatial Dependency of Buruli Ulcer on Potential Surface Runoff and Potential Maximum Soil Water Retention", International Journal of Research in Medical and Health Sciences, Vol. 03, No. 5, pp. 01-15</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox83</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox80">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Conference Publications</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox80</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.80114in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox92">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Adam, M, Asamoah, R K, Ofori-Sarpong, G and Amankwah, R K (2014). Preg-robbing Characteristics of Gold Ores in Ghana. 3rd UMaT Biennial International Mining and Mineral Conference, 192–196.
+Adjei, D K, Ofori-Sarpong, G and Amankwah, R K (2014). Effect of distillation length on the performance of lantern retort. 3rd UMaT Biennial International Mining and Mineral Conference, 197-203.</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox92</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox89">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Book Contribution/Reviews</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox89</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.47159in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox86">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Amankwah, R K and Anim-Sackey, C (2007), "Fostering Cooperation between Small- and Large-scale Gold Miners in West Africa", Hilson, G M (Ed), Practical Action Publications, Rugby, pp 67-73</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox86</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox95">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Exhibitions</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox95</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.42992in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox98">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Choi, Y, Yen, W T and Amankwah, R K (2009). Microbial Pretreatment of Double Refractory Gold Ores, IPC8 Class AC22B1100F1, USPC 75711.</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox98</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox101">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Record of Service</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox101</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.44886in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox110">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Dean, Faculty of Mineral Resources Technology (2014 – date)
+Vice Dean, Faculty of Mineral Resources Technology (2012 – 2014)</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox110</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox107">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Other Additional Activities</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox107</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.42046in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox104">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Reviewer, Hydrometallurgy Journal Resources Policy, Journal of Cleaner Production
+Reviewer, Mineral Processing and Extractive Metallurgy, IMM, Transactions C</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox104</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>3</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <Top>1.16542in</Top>
+            <Left>0.02431in</Left>
+            <Height>11.96652in</Height>
+            <Width>7.77901in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>13.26451in</Height>
+        <Style />
+      </Body>
+      <Width>7.80332in</Width>
+      <Page>
+        <LeftMargin>0.25in</LeftMargin>
+        <RightMargin>0.25in</RightMargin>
+        <TopMargin>0.25in</TopMargin>
+        <BottomMargin>0.25in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="staffId">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>3243</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>staff Id</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>staffId</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <EmbeddedImages>
+    <EmbeddedImage Name="user">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="user1">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>738ac95f-05c7-4a2f-becd-7738d4f4c587</rd:ReportID>
+</Report>

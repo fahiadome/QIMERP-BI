@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="dsEstimateItems">
+      <DataSourceReference>QIMERPDATA</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>0bb503ee-97b6-45f5-ae33-5bc6518e9970</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="dsStoreRequisitionItems">
+      <Query>
+        <DataSourceName>dsEstimateItems</DataSourceName>
+        <CommandText>SELECT
+  *
+FROM
+  ViewStoreRequisitionItem</CommandText>
+        <rd:DesignerState>
+          <QueryDefinition xmlns="http://schemas.microsoft.com/ReportingServices/QueryDefinition/Relational">
+            <SelectedColumns>
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="StoreRequisitionItemId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="StoreRequisitionId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="ItemId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="Description" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="QuantityIssued" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="QuantityRequested" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="QuantityReturned" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="CreateDate" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="CreateBy" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="LastModifiedDate" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="LastModifiedBy" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="PurchaseCode" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="ItemCode" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="ItemGroupId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="ItemTypeId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="ItemCategoryId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="Item" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="RecordParentCode" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="NumberOfAncestor" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="InventoryAccountId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="RegistrationNumber" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="SerialNumber" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="WarrantyExpireDate" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="AcquiredAsNew" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="IsActive" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="CartonTypeId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="PiecesInCarton" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="QuantityOnHand" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="QuantityOnOrder" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="QuantityOnSalesOrder" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="ExpireDate" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="InventoryDate" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="PurchaseDate" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="CostDescription" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="AverageCost" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="UnitCost" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="COGSAccountId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="PreferredVendorId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="CostIsTaxIncluded" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="CostTaxItemd" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="Color" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="FinishedGoodsFlag" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="UnitOfMeasureId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="Class" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="DateSold" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="Price" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="PricePercent" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="SalesDescription" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="ScrapAccountId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="AdjustmentAccountId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="IncomeAccountId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="SalesIsTaxIncluded" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="SalesTaxItemd" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="IsSellableItem" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="IsTrackingSerialNumber" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="ReorderPoint" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="ItemClassId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="Length" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="Width" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="Height" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="SizeUnitOfMeasure" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="Weight" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="WeightUnitOfMeasure" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="AssetNumber" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="FixedAssetClassId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="ChaseNumber" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="DepreciationRate" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleBrandTypeId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleManufacturerId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleManufacturerYear" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleEngineSize" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleEngineCylinder" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleTransmissionTypeId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleTransmissionGear" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleStandardSeating" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleSteeringTypeId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleEngine" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleCityMileage" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleHighwayMileage" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleCityMileageUnitOfMeasureId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleHighwayMileageUnitOfMeasureId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleDoor" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleTypeId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleModel" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleSizeTypeId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleCategoryId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleFuelTypeId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleFuelCapacity" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="VehicleFuelCapacityUnitOfMeasureId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="IsVehicle" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="ItemType" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="IsSystemDefault" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="UnitOfMeasure" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="UnitOfMeasureFullName" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="UnitOfMeasureTypeId" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="ItemCategory" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="IsFixedAssetItemCategory" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="IsSystemDefaultUnitOfMeasure" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="UnitOfMeasureType" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="ItemGroup" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="IsFixedAssetItemClass" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="IsSystemDefaultItemClass" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="ItemClass" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="COGSAccountFullName" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="IncomeAccountFullName" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="InventoryAccountFullName" />
+              <ColumnExpression ColumnOwner="ViewStoreRequisitionItem" ColumnName="StoreDescription" />
+            </SelectedColumns>
+          </QueryDefinition>
+        </rd:DesignerState>
+      </Query>
+      <Fields>
+        <Field Name="StoreRequisitionItemId">
+          <DataField>StoreRequisitionItemId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="StoreRequisitionId">
+          <DataField>StoreRequisitionId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="ItemId">
+          <DataField>ItemId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="QuantityIssued">
+          <DataField>QuantityIssued</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="QuantityRequested">
+          <DataField>QuantityRequested</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="QuantityReturned">
+          <DataField>QuantityReturned</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CreateDate">
+          <DataField>CreateDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CreateBy">
+          <DataField>CreateBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastModifiedDate">
+          <DataField>LastModifiedDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="LastModifiedBy">
+          <DataField>LastModifiedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PurchaseCode">
+          <DataField>PurchaseCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemCode">
+          <DataField>ItemCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemGroupId">
+          <DataField>ItemGroupId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemTypeId">
+          <DataField>ItemTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ItemCategoryId">
+          <DataField>ItemCategoryId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Item">
+          <DataField>Item</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RecordParentCode">
+          <DataField>RecordParentCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumberOfAncestor">
+          <DataField>NumberOfAncestor</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="InventoryAccountId">
+          <DataField>InventoryAccountId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="RegistrationNumber">
+          <DataField>RegistrationNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SerialNumber">
+          <DataField>SerialNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="WarrantyExpireDate">
+          <DataField>WarrantyExpireDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="AcquiredAsNew">
+          <DataField>AcquiredAsNew</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="IsActive">
+          <DataField>IsActive</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CartonTypeId">
+          <DataField>CartonTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PiecesInCarton">
+          <DataField>PiecesInCarton</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="QuantityOnHand">
+          <DataField>QuantityOnHand</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="QuantityOnOrder">
+          <DataField>QuantityOnOrder</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="QuantityOnSalesOrder">
+          <DataField>QuantityOnSalesOrder</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ExpireDate">
+          <DataField>ExpireDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="InventoryDate">
+          <DataField>InventoryDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PurchaseDate">
+          <DataField>PurchaseDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CostDescription">
+          <DataField>CostDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AverageCost">
+          <DataField>AverageCost</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="UnitCost">
+          <DataField>UnitCost</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="COGSAccountId">
+          <DataField>COGSAccountId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="PreferredVendorId">
+          <DataField>PreferredVendorId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="CostIsTaxIncluded">
+          <DataField>CostIsTaxIncluded</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CostTaxItemd">
+          <DataField>CostTaxItemd</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Color">
+          <DataField>Color</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FinishedGoodsFlag">
+          <DataField>FinishedGoodsFlag</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="UnitOfMeasureId">
+          <DataField>UnitOfMeasureId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Class">
+          <DataField>Class</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateSold">
+          <DataField>DateSold</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Price">
+          <DataField>Price</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PricePercent">
+          <DataField>PricePercent</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SalesDescription">
+          <DataField>SalesDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ScrapAccountId">
+          <DataField>ScrapAccountId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="AdjustmentAccountId">
+          <DataField>AdjustmentAccountId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="IncomeAccountId">
+          <DataField>IncomeAccountId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="SalesIsTaxIncluded">
+          <DataField>SalesIsTaxIncluded</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="SalesTaxItemd">
+          <DataField>SalesTaxItemd</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IsSellableItem">
+          <DataField>IsSellableItem</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="IsTrackingSerialNumber">
+          <DataField>IsTrackingSerialNumber</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ReorderPoint">
+          <DataField>ReorderPoint</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ItemClassId">
+          <DataField>ItemClassId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Length">
+          <DataField>Length</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Width">
+          <DataField>Width</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Height">
+          <DataField>Height</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SizeUnitOfMeasure">
+          <DataField>SizeUnitOfMeasure</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Weight">
+          <DataField>Weight</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="WeightUnitOfMeasure">
+          <DataField>WeightUnitOfMeasure</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AssetNumber">
+          <DataField>AssetNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FixedAssetClassId">
+          <DataField>FixedAssetClassId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ChaseNumber">
+          <DataField>ChaseNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DepreciationRate">
+          <DataField>DepreciationRate</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="VehicleBrandTypeId">
+          <DataField>VehicleBrandTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="VehicleManufacturerId">
+          <DataField>VehicleManufacturerId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="VehicleManufacturerYear">
+          <DataField>VehicleManufacturerYear</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="VehicleEngineSize">
+          <DataField>VehicleEngineSize</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="VehicleEngineCylinder">
+          <DataField>VehicleEngineCylinder</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="VehicleTransmissionTypeId">
+          <DataField>VehicleTransmissionTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="VehicleTransmissionGear">
+          <DataField>VehicleTransmissionGear</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="VehicleStandardSeating">
+          <DataField>VehicleStandardSeating</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="VehicleSteeringTypeId">
+          <DataField>VehicleSteeringTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="VehicleEngine">
+          <DataField>VehicleEngine</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VehicleCityMileage">
+          <DataField>VehicleCityMileage</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="VehicleHighwayMileage">
+          <DataField>VehicleHighwayMileage</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="VehicleCityMileageUnitOfMeasureId">
+          <DataField>VehicleCityMileageUnitOfMeasureId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VehicleHighwayMileageUnitOfMeasureId">
+          <DataField>VehicleHighwayMileageUnitOfMeasureId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VehicleDoor">
+          <DataField>VehicleDoor</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="VehicleTypeId">
+          <DataField>VehicleTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="VehicleModel">
+          <DataField>VehicleModel</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VehicleSizeTypeId">
+          <DataField>VehicleSizeTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="VehicleCategoryId">
+          <DataField>VehicleCategoryId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="VehicleFuelTypeId">
+          <DataField>VehicleFuelTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="VehicleFuelCapacity">
+          <DataField>VehicleFuelCapacity</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="VehicleFuelCapacityUnitOfMeasureId">
+          <DataField>VehicleFuelCapacityUnitOfMeasureId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsVehicle">
+          <DataField>IsVehicle</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ItemType">
+          <DataField>ItemType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsSystemDefault">
+          <DataField>IsSystemDefault</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="UnitOfMeasure">
+          <DataField>UnitOfMeasure</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UnitOfMeasureFullName">
+          <DataField>UnitOfMeasureFullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UnitOfMeasureTypeId">
+          <DataField>UnitOfMeasureTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ItemCategory">
+          <DataField>ItemCategory</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsFixedAssetItemCategory">
+          <DataField>IsFixedAssetItemCategory</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="IsSystemDefaultUnitOfMeasure">
+          <DataField>IsSystemDefaultUnitOfMeasure</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="UnitOfMeasureType">
+          <DataField>UnitOfMeasureType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemGroup">
+          <DataField>ItemGroup</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsFixedAssetItemClass">
+          <DataField>IsFixedAssetItemClass</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="IsSystemDefaultItemClass">
+          <DataField>IsSystemDefaultItemClass</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ItemClass">
+          <DataField>ItemClass</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="COGSAccountFullName">
+          <DataField>COGSAccountFullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IncomeAccountFullName">
+          <DataField>IncomeAccountFullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="InventoryAccountFullName">
+          <DataField>InventoryAccountFullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StoreDescription">
+          <DataField>StoreDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Filters>
+        <Filter>
+          <FilterExpression>=Fields!StoreRequisitionId.Value</FilterExpression>
+          <Operator>Equal</Operator>
+          <FilterValues>
+            <FilterValue>=Parameters!EstimateId.Value</FilterValue>
+          </FilterValues>
+        </Filter>
+      </Filters>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>4.95202in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.46465in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.26562in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Description</Value>
+                                  <Style>
+                                    <FontFamily>calibri</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Quantity</Value>
+                                  <Style>
+                                    <FontFamily>calibri</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.28646in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Item">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Item.Value</Value>
+                                  <Style>
+                                    <FontFamily>calibri</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Item</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="QuantityRequested">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!QuantityRequested.Value</Value>
+                                  <Style>
+                                    <FontFamily>calibri</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>QuantityRequested</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Total</Value>
+                                  <Style>
+                                    <FontFamily>calibri</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="QuantityRequested1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!QuantityRequested.Value)</Value>
+                                  <Style>
+                                    <FontFamily>calibri</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>QuantityRequested1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details" />
+                </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>dsStoreRequisitionItems</DataSetName>
+            <Height>0.80208in</Height>
+            <Width>6.41667in</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <TopBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </TopBorder>
+              <BottomBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </BottomBorder>
+              <LeftBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </RightBorder>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>0.80208in</Height>
+        <Style />
+      </Body>
+      <Width>6.41667in</Width>
+      <Page>
+        <BottomMargin>0.5in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="EstimateId">
+      <DataType>Integer</DataType>
+      <Prompt>Enter Estimate ID</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>EstimateId</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>eb005db6-3532-4044-ad13-503e3f81f8e0</rd:ReportID>
+</Report>

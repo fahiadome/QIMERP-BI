@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSets>
+    <DataSet Name="dsCompanyHeader1">
+      <SharedDataSet>
+        <SharedDataSetReference>dsSHAREDCOMPANY</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="CompanyId">
+          <DataField>CompanyId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AddressLine1">
+          <DataField>AddressLine1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AddressLine2">
+          <DataField>AddressLine2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CityId">
+          <DataField>CityId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DBA">
+          <DataField>DBA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CountryId">
+          <DataField>CountryId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CompanyNumber">
+          <DataField>CompanyNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Website">
+          <DataField>Website</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EmployerSSN">
+          <DataField>EmployerSSN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Voice">
+          <DataField>Voice</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Fax">
+          <DataField>Fax</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Modem">
+          <DataField>Modem</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsGhanaVersion">
+          <DataField>IsGhanaVersion</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="IsMultiDepartment">
+          <DataField>IsMultiDepartment</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="VATRate">
+          <DataField>VATRate</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="ConsolidateTimeSheet">
+          <DataField>ConsolidateTimeSheet</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="OrganizationalUnitId">
+          <DataField>OrganizationalUnitId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FirstMonthOfFiscalYear">
+          <DataField>FirstMonthOfFiscalYear</DataField>
+          <rd:TypeName>System.Int16</rd:TypeName>
+        </Field>
+        <Field Name="StockCurrencyId">
+          <DataField>StockCurrencyId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Zip">
+          <DataField>Zip</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VATNumber">
+          <DataField>VATNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NHILRate">
+          <DataField>NHILRate</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EnforceOUSecurity">
+          <DataField>EnforceOUSecurity</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="IncludeVAT">
+          <DataField>IncludeVAT</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CurrencyId">
+          <DataField>CurrencyId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ContactPerson">
+          <DataField>ContactPerson</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Notes">
+          <DataField>Notes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DefaultARGL">
+          <DataField>DefaultARGL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CurrentUser">
+          <DataField>CurrentUser</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CompName">
+          <DataField>CompName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BillStaffId">
+          <DataField>BillStaffId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ForeignCurrencyId">
+          <DataField>ForeignCurrencyId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BankGLid">
+          <DataField>BankGLid</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RevenueGLd">
+          <DataField>RevenueGLd</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ARGLid">
+          <DataField>ARGLid</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RetireAge">
+          <DataField>RetireAge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CompulsoryAge">
+          <DataField>CompulsoryAge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="VoluntaryAge">
+          <DataField>VoluntaryAge</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MonthsToCompulsaryRtm">
+          <DataField>MonthsToCompulsaryRtm</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PercentAccessible">
+          <DataField>PercentAccessible</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="InterestPerAnnum">
+          <DataField>InterestPerAnnum</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ShowGLNo">
+          <DataField>ShowGLNo</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ShowReportHeaderAR">
+          <DataField>ShowReportHeaderAR</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="IncludeCompanyLogoOnReportAR">
+          <DataField>IncludeCompanyLogoOnReportAR</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ShowReportHeaderAP">
+          <DataField>ShowReportHeaderAP</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="IncludeCompanyLogoOnReportAP">
+          <DataField>IncludeCompanyLogoOnReportAP</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ARPaymentDesc">
+          <DataField>ARPaymentDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SMTPServerName">
+          <DataField>SMTPServerName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SMTPServerIP">
+          <DataField>SMTPServerIP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowInvoiceMessage">
+          <DataField>ShowInvoiceMessage</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="InvoiceMessage">
+          <DataField>InvoiceMessage</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowQuotationMessage">
+          <DataField>ShowQuotationMessage</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="QuotationMessage">
+          <DataField>QuotationMessage</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ConsolidateVoucher">
+          <DataField>ConsolidateVoucher</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ConsolidateHWC">
+          <DataField>ConsolidateHWC</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EmployeePF">
+          <DataField>EmployeePF</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EmployerPF">
+          <DataField>EmployerPF</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EmployeeSA">
+          <DataField>EmployeeSA</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EmployerSA">
+          <DataField>EmployerSA</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="TreatPFasSSF">
+          <DataField>TreatPFasSSF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TreatSAasSSF">
+          <DataField>TreatSAasSSF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TreatSecPFasSSF">
+          <DataField>TreatSecPFasSSF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PaySSF">
+          <DataField>PaySSF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PayPF">
+          <DataField>PayPF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PaySecPF">
+          <DataField>PaySecPF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PaySA">
+          <DataField>PaySA</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TaxEmployerSSF">
+          <DataField>TaxEmployerSSF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TaxEmployerPF">
+          <DataField>TaxEmployerPF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TaxEmployerSecPF">
+          <DataField>TaxEmployerSecPF</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TaxEmployerSA">
+          <DataField>TaxEmployerSA</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="LocationId">
+          <DataField>LocationId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OrderBatchNos">
+          <DataField>OrderBatchNos</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="VoucherTxt1">
+          <DataField>VoucherTxt1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VoucherTxt2">
+          <DataField>VoucherTxt2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VoucherTxt3">
+          <DataField>VoucherTxt3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowARHomePage">
+          <DataField>ShowARHomePage</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ShowAPHomePage">
+          <DataField>ShowAPHomePage</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="AddInterestCharded">
+          <DataField>AddInterestCharded</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ReadMailReceipt">
+          <DataField>ReadMailReceipt</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="MailServerRequiresAuthentication">
+          <DataField>MailServerRequiresAuthentication</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="UnionName">
+          <DataField>UnionName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VoucherTxt4">
+          <DataField>VoucherTxt4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VoucherTxt5">
+          <DataField>VoucherTxt5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ConcatinateClassName">
+          <DataField>ConcatinateClassName</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="WHRate">
+          <DataField>WHRate</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ConcatinateName">
+          <DataField>ConcatinateName</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Redenomed">
+          <DataField>Redenomed</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="AllocateTaxSalary">
+          <DataField>AllocateTaxSalary</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="SortPayrollReportByID">
+          <DataField>SortPayrollReportByID</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EmployeeSecPF">
+          <DataField>EmployeeSecPF</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EmployerSecPF">
+          <DataField>EmployerSecPF</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="UseCheckBook">
+          <DataField>UseCheckBook</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PRRedenomed">
+          <DataField>PRRedenomed</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EnforceOU">
+          <DataField>EnforceOU</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ChurchRedenomined">
+          <DataField>ChurchRedenomined</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ARSignature">
+          <DataField>ARSignature</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="ARAuthority">
+          <DataField>ARAuthority</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ARAuthorityPositionID">
+          <DataField>ARAuthorityPositionID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FARedenomined">
+          <DataField>FARedenomined</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ARRedenomed">
+          <DataField>ARRedenomed</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="APRedenomed">
+          <DataField>APRedenomed</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="SPRedenomined">
+          <DataField>SPRedenomined</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="HSRedenomined">
+          <DataField>HSRedenomined</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="SMRedenomied">
+          <DataField>SMRedenomied</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="GLSubD">
+          <DataField>GLSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PRSubD">
+          <DataField>PRSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ARSubD">
+          <DataField>ARSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="APSubD">
+          <DataField>APSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FASubD">
+          <DataField>FASubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SPSubD">
+          <DataField>SPSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HSSubD">
+          <DataField>HSSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SMSubD">
+          <DataField>SMSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LNSubD">
+          <DataField>LNSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AddQuotationVAT">
+          <DataField>AddQuotationVAT</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CMSSubD">
+          <DataField>CMSSubD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StartDepreciationFromFirstFiscalMonth">
+          <DataField>StartDepreciationFromFirstFiscalMonth</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ShowPayout">
+          <DataField>ShowPayout</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TradeUnionID">
+          <DataField>TradeUnionID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OTPercOnBasic">
+          <DataField>OTPercOnBasic</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="OTPercOnDaily">
+          <DataField>OTPercOnDaily</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="RFX">
+          <DataField>RFX</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CMethod">
+          <DataField>CMethod</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RWarehouse">
+          <DataField>RWarehouse</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="LastFiscalPeriod">
+          <DataField>LastFiscalPeriod</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ContributionType">
+          <DataField>ContributionType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ExcludeAllowanceForBackPay">
+          <DataField>ExcludeAllowanceForBackPay</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Signatory1">
+          <DataField>Signatory1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Signatory2">
+          <DataField>Signatory2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Signatory3">
+          <DataField>Signatory3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Signatory4">
+          <DataField>Signatory4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Signatory5">
+          <DataField>Signatory5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SelectAccountByCode">
+          <DataField>SelectAccountByCode</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="MailServerUserName">
+          <DataField>MailServerUserName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MailServerPassword">
+          <DataField>MailServerPassword</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SenderName">
+          <DataField>SenderName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SenderEmailAddress">
+          <DataField>SenderEmailAddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PortNo">
+          <DataField>PortNo</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Auditories1">
+          <DataField>Auditories1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Auditories2">
+          <DataField>Auditories2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Auditories3">
+          <DataField>Auditories3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShowAuditories">
+          <DataField>ShowAuditories</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="AccountName1">
+          <DataField>AccountName1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AccountName2">
+          <DataField>AccountName2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BankName1">
+          <DataField>BankName1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BranchName1">
+          <DataField>BranchName1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SWIFTCODE1">
+          <DataField>SWIFTCODE1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Currency1">
+          <DataField>Currency1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AccountName3">
+          <DataField>AccountName3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AccountName4">
+          <DataField>AccountName4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BankName2">
+          <DataField>BankName2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BranchName2">
+          <DataField>BranchName2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SWIFTCODE2">
+          <DataField>SWIFTCODE2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Currency2">
+          <DataField>Currency2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Chkno">
+          <DataField>Chkno</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ShowInvoiceMessagefooter">
+          <DataField>ShowInvoiceMessagefooter</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Textbox Name="Textbox20">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Label>CompanyName</Label>
+                    <Value>=First(Fields!Name.Value, "dsCompanyHeader1")</Value>
+                    <Style>
+                      <FontFamily>times New Roman</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Label>AddressLine1</Label>
+                    <Value>=First(Fields!AddressLine1.Value, "dsCompanyHeader1")</Value>
+                    <Style>
+                      <FontFamily>times New Roman</FontFamily>
+                      <FontSize>11pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontFamily>times New Roman</FontFamily>
+                      <FontSize>11pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Label>AddressLine2</Label>
+                    <Value>=First(Fields!AddressLine2.Value, "dsCompanyHeader1")</Value>
+                    <Style>
+                      <FontFamily>times New Roman</FontFamily>
+                      <FontSize>11pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Label>PhoneNumber</Label>
+                    <Value>=First(Fields!Voice.Value, "dsCompanyHeader1")</Value>
+                    <Style>
+                      <FontFamily>times New Roman</FontFamily>
+                      <FontSize>11pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontFamily>times New Roman</FontFamily>
+                      <FontSize>11pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Label>Email</Label>
+                    <Value>=First(Fields!Email.Value, "dsCompanyHeader1")</Value>
+                    <Style>
+                      <FontFamily>times New Roman</FontFamily>
+                      <FontSize>11pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>times New Roman</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox20</rd:DefaultName>
+            <Top>0.00644in</Top>
+            <Left>0.68722in</Left>
+            <Height>0.63537in</Height>
+            <Width>5.69246in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line1">
+            <Top>0.66958in</Top>
+            <Height>0in</Height>
+            <Width>6.37968in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line2">
+            <Top>0.69723in</Top>
+            <Height>0in</Height>
+            <Width>6.37968in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>2pt</Width>
+              </Border>
+            </Style>
+          </Line>
+          <Image Name="Image1">
+            <Source>Embedded</Source>
+            <Value>Logo</Value>
+            <Sizing>Fit</Sizing>
+            <Height>0.60014in</Height>
+            <Width>0.68722in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+        </ReportItems>
+        <Height>0.69723in</Height>
+        <Style />
+      </Body>
+      <Width>6.37968in</Width>
+      <Page>
+        <PageHeight>11.69in</PageHeight>
+        <PageWidth>8.27in</PageWidth>
+        <LeftMargin>0.25in</LeftMargin>
+        <RightMargin>0.25in</RightMargin>
+        <TopMargin>0.25in</TopMargin>
+        <BottomMargin>0.5in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <EmbeddedImages>
+    <EmbeddedImage Name="Logo">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSERUSERIRFhUVGBgWFxgWFRgVFRUXFxUXGBYVFxgYHSgiGholHRoVIjMhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGy0lICUtLS0tLS8tLy0tLy0tLS0tLS0tLi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAPMA0AMBEQACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABQYDBAcBAv/EAE8QAAEDAgMCBgwKBwcEAwAAAAEAAgMEEQUSIQYxE0FRYXF0BxQiMjU2VYGRk7KzFRYjQlJUcqGx0SQlM2KSlMFDU3OCwtLwNESiw2OD4f/EABsBAQADAQEBAQAAAAAAAAAAAAADBAUBAgYH/8QAOREAAgEDAQQFCgUFAQEAAAAAAAECAwQRIRIxQVEFExQicTIzNFJhcoGRseFCU6HB0RUjYvDxBiT/2gAMAwEAAhEDEQA/AO4oAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIBdAEAQBAEAQBAEAQHOtoccxJ+LnD6CSmjDadsxM0ZdclxB1HmQGftHaH63hnqXoB2jtD9bwz1L0A7R2h+t4Z6l6Ado7Q/W8M9S9AO0dofreGepegHaO0P1vDPUvQDtHaH63hnqXoB2jtD9bwz1L0A7R2h+t4Z6l6Ado7Q/W8M9S9AO0dofreGepegHaO0P1vDPUvQDtHaH63hnqXoB2jtD9bwz1L0A7R2h+t4Z6l6Ado7Q/W8N9S9AY9n8YxJmKtoa+Wlka+nfMDDGW2IeGjU+dAdCCAIAgCAIAgCAIDnUXjTJ1FvvEBI4i6qnxGSnhq3QNjiY/RjXgkmx36315VXntSqNJ4NWj1NO1VScNpuWN5
+sfF6v8qv9Qz813q5+sc7Za/k/r9h8Xa/yo/1DPzTq6nrHO2W35K+f2Hxdr/Kj/UM/NOrqesO2W35K+f2Hxdr/Kj/AFDPzTq6nrDtlt+Svn9h8Xa/yo/1DPzTq6nrDtlt+Svn9h8Xa/yo/wBQz806up6w7Zbfkr5/YfF2v8qP9Qz806up6w7Zbfkr5/YfF2v8qP8AUM/NOrqesO2W35K+f2Hxdr/Kj/UM/NOrqesO2W35K+f2Hxdr/Kj/AFDPzTq6nrDtlt+Svn9h8Xa/yo/1DPzTq6nrDtlt+Svn9h8Xa/yo/wBQz806up6w7Zbfkr5/YfF2v8qP9Qz806up6w7Zbfkr5/YfF6v8qv8AUM/NOrn6x3tlr+Svn9jXw11VBiMdPNVunY+J77FjWAWOm7W+nLxrkdqNTDlnQ9Vuoq2jqQhstSS3mrU+M0XUX+9CsGSX5AEAQBAEAQBAEBzqHxpf1FvvEBM0Phmo6vH+IUC86/A0p+gQ95/QpE8tbU11e1uI1ULIZ+DYyPLlDct+NaFGj1iMOvX6prQyfBNd5YrvQxTdkXMr9tfIfBNd5YrvQxd7IuY7a+Q+Ca7yxXehidkXMdtfIfBNd5YrvQxOyLmO2vkPgmu8sV3oYnZFzHbXyHwTXeWK70MTsi5jtr5D4JrvLFd6GJ2Rcx218h8E13liu9DE7IuY7a+Q+Ca7yxXehidkXMdtfIfBNd5YrvQxOyLmO2vkPgmu8sV3oYnZFzHbXyHwTXeWK70MXOyLmO2vkfOF1FbT4rQQyYhUzx1Dpw9kmXLaOK43c5B8ygrUurwWLet1mdC61vhmn6u/2iqD86vA3YegT99fQjanxmi6i/3oU5mF+QBAEAQBAEAQBAc6i8aZOot94gJmg8M1HV4/aCgXnX4GlU9Ah7z+hUMEH6divW/9C1bTcz5y98pE7lVvJRwMqZGBlTIwMqZGBlXRgZVzIwMq7kYGVMjAyoMDKuZGBlTIwMqZGCBrB+usI+1V
+e5aqd3wNCy3MuFd4ap+rye0Vlvzy8D6GHoE/fX0I2p8Zouov96FOZpfkAQBAEAQBAEAQHOovGmTqLfeICZoPDNR1eP2goF51+BpVPQIe8/oVPAR+nYr1v/1rUtXoz528WqJ/KrZTwMqDAyoMDKgwMq5kbhlXHNJZ4HVF7WyMq7lJnEm9RlRPIwMqZGBlXcjAyoMDKgwV/EB+usI+1V+5aqd1wL9nuZba7w1T9Xf7RWY/PLwN+HoEveX0I2p8Zouov96FOZpfkAQBAEAQBAEAQHOovGmTqLfeICZoPDNR1eP2goF51+BpVPQIe8yrbOj9OxXrf/rWnbbmfP3a1RYsitZKeBkTJ3AyJkYPC1Q1a6pYct27J7hTc3hbzyygdfYuFTb0ktPHkSKlmntLXG88I0PMsupeYtK8Xvg2vhnQtRoZqwa/Ev8Ap7bVW5XO1cUaa5OREqOzSnLk0gAvdC8U1UqvyU8fI8VKEouMF5TWT0NV2nV2oKUtMkM4YlhHuRS5PGOQyLuTmBkTJ3BW8TH66wf7VX7lqqXL3F204lrrfDNP1d/tFZr88vA3oegS95fQjanxmi6i/wB6FOZpfkAQBAEAQBAEAQHOovGmTqLfeICZoPDNR1eP2goF51+BpVPQIe8/oVrZkfp2LdbHu1o2+4wbneix5VZyVcDIiYwHCyr1q8YeXuJI03LcfDtN+5ZlxcqhHvvapS0zvx4+wtU6W2+7pNfqY3Hi84KwLm7cYuhKWXHvU5ezkaVGhmW3Fb9JL9z4Lt/OFmV+k1N1Gvxx18SzStdlR/xenge5/wALLv8AVpbbqJ67Gyh2NbOzw2ss+h9w39K0re7g4wpSf9umsyfrSKtSlJbUku9LRexGQcp0HEt2hdKf/wBFd7MfwR4+PjyKE6Ch/bpaviz7DVrUasqi22sFKcFF4yMqnyeMDKmRgrOMD9dYP9qr9y1VbjgXLVby0Vvhmn6u/wBorPfnl4G5D0CXvL6EbU+M0XUX
++9CnM0vyAIAgCAIAgCAIDnUXjTJ1FvvEBM0Hhmo6vH7QUEfPPwNKp6BH3n9Cu7Kj9NxbrY92tCgYdwtUWfKp8lbAyrjftO4yfDmkch+4qhXlcQTcUprlx/gsU4035TwzWe62645WncvlLq6jTk3SzB8YSWj8DWo0XNLb7y9Zbz6oqN0rrN0A3niCybSzqXs9mGkV+ngXalSNJZer+pPQYLEBqC48pJ/BfUUeg7WCxJZftM+V3Ue7Q9mwaIjQFp5QT+CVug7WotFjwEbqqt7IGuo3ROsdQdx4j/8Aq+Xu7OrYzSesd65M0aVWNVZ/6fMRud2Y8u4Ba/R9w5z21HbnzekY+BQuKaUdlvZjyW9mcAcZHQvpaVWOc1quXyW5fIzJR/Ljhe3j8zJlWnGSlqVWte8Mq9ZOYKtjg/XWDfaq/csVevwLVvxLJW+Gqfq7/aKoPzy8Dbh6BL3l9CNqfGaLqL/ehTmaX5AEAQBAEAQBAEBzqLxpk6i33iAmaDwzUdXj9oKBeefgaVT0CHvP6EDsiP03Futj3avUTErotWVT5IMHjm8yjqySXeWUeoxb3GrNlAJOcW1JAIAHKeJYF1O1W5VE/wDHP8l+lGpzj8TWha+ZodCySRhvlddmQ20u1xdqOcLKr9HXFzHMJNr/AD3/ALl6nWhTeqXwJeCd0MYaeBj5S9+ZxPLkaP8AUt2xtFa0VTW/iVK1TrJ5MlLWPkzGKaN5aLlpjLGnmBvcdOvQrhGeOxJ5a15c2MPAc1hYXvynUZyHAA7tBu5SjBiqKsysLDwT+SxMbr8Vmv0/8lVvrWFzSdJ/DxJKVTYllESWPaC58UoaN57ktHTlJXzVHou5peci5JcEy9O4jPc8fA3KY3ALGtykXBDgQQdxBG8L6KzVSK7luo+L1Mus4t96bZsNZyrYjKTXeXyKbSzoe5VJk84KltAP11g32qz3LFBW4FihxLDW+Gafq7/aKpPzq8Dah6BL3l9CNqfGaLqL/ehT
+GaX5AEAQBAEAQBAEBzqLxpk6i33iAmaDwzUdXj9oKCPnX4GlU9Ah7z+hDbFtvWYv1we7VykY1UtvBqbJFg8LF4m5Y7p1RXEpvZBqJXCDD4XDha5/BHKNWQf20lzxZdPT0Gni428yksckv3LMFTxoiwY/lp4oaaHuWsaAANLMYA1o0/5opD0V1AWPY7fL0N/1ID6rh8lT/wCE38GrgNJASuCatkHQ63La/wCSIFX2ZaKWqqMNe8jgzw9LrYGlkJswA/QddvRbkVedGCntubj8dDrk8YST+Bb2xc91oU8pb8lSS13HvBqTJ52SnbTNtjWC/arPcsUNVk1JYyTtd4Zp+rv9oqm/OrwNiHoEveX0I2p8Zouov96FOZpfkAQBAEAQBAEAQHOovGmTqLfeICZoPDNR1eP2goF51+BpVPQIe8/oVzZbF4IK3FhNKxhdVggOO8CPerCmomLWrQh5TLMdqaL6zF9/5L11sSv2ujzPh21lCN9TH6HfkuOrHdkK6otrEtSvdjZnb9dVYs4OyC9LSh3FG0gvf0nTou4KOKSNAkcXmM1Q8tBdY5RYE6N04ue69A+4Nn53C+UN+0bH0aoCZ2coJIXSiRtrhtiNQe+3FAey0jpIafIL2jbfW3zWrgNOTDZW72E9Fj+CA3MBjcHuDmuALeMEDegK32Tad8MdPikLc0lE60oH9pTvOSVp6DY67tSmE94JqDaihc1rm1UGVwBF3AGxF9RxFe1OC0WhTlXpRlhyMnxio/rUH8YXeujzPPaKPrIquPYjDNjWDcDKyTK6szZTe14WWv02PoXHNS3E9GpCedl5LHXeGafq7/aKrPzq8DZh6BP3l9CNqfGaLqL/AHoU5ml+QBAEAQBAEAQBAc6i8aZOot94gJmg8M1HV4/aCgXnn4GlU9Ah7zOQ434SxHrB9kJW4HyHS/lx8DCoTHIjaOvDI8gcA5/PuHH6d3pUlOOdTU6Nttue29yL9gPZZw+ipIqaCKVwiYAb
+lrMzt7nHfvdc+dWD6JmlifZxkNxS08Mf7z3Zj6BvQYRUa/slYjKbmtezmjIYPuQ7oTGyvZcrIJGtqZO2YSbOBDRK1u4uY5oF7b7OvflCHDPtX2WKglsNDIIYWNa3hLDhZCGgOd3Y7ht7gC19L3F7AMFcp+yLiTHZhXyk8jnNc3+EiyHdC04V2bqlthUMikHGWkMcf6BDmhZWdmXDZonRVEUrWvaWubpICHCx1FuVAcwwCsju+FkmdrSeCJ0c5lza44juNudQVI8TD6VtsNVI8d5MqIxjd2S8M4f9ub3DlNSNroj8XwOr13hqn6u/2ikvPLwZ9ZT9Al7y+hG1PjNF1F/vQpzNL8gCAIAgCAIAgCA51F40ydRb7xATNB4ZqOrx+0FAvPPwNKp6BD3mchxvwliPWT7IStwPkOl/Lj4GFQmOSWFY3LTtc2MQkOOY8JEHkGwGhJFhoNF7jPBet76dCOzFI3vjfUfQpP5cf7l660n/AKrV5IfG+o+hSfy4/wBydaP6rV5IfG+o+hSfy4/3J1o/qtXkj4qauPEInw180FNG3LI17IWscXNJuMxuLWK9wntF6yvnVbU8LkYqPgMPjth9VFUiVxc9z4mPy5Q0NANt3faJOeNx7vrx0V3cZMvxtqeSm/l2KPrWZv8AVq3JD421PJTfy7E61j+q1uSHxtqeSm/l4061j+rVuSNbEcemnZwcghy3B7iFrHXG7UarjqNrBHV6QqVYuLxhkWvBnm7sn4Yw/wC3N7hympG10R+L4HV67w1T9Xf7RSXnl4M+tp+gS95fQjanxmi6i/3oU5ml+QBAEAQBAEAQBAc6i8aX9Rb7xATNB4ZqOrx+0FAvPPwNKp6BD3n9DkON+EsR6yfZCVuB8h0v5cfAwqExwh0IcCHcBDhrYl+xk+yfwXqHlFm08/ExYJ+wZ0H2ik/KJekPSJG8vJSBKLU6k28IBGGnF4YQ4EOG7sn4Yw77c3uHKakbfRH4vgdXrvDVP1d/
+tFJeeXgz6yHoEveX0I2p8Zouov8AehTmaX5AEAQBAEAQBAEBzxjbbUu56AH0SkICYpNMZm56aM+h9lAvPPwNGfoEfef0OQ7QMLcWxFp/vmu8z2Aj7rJW4HyfS61izAoTFCHUs6IkMTwh8EbOGJZLJZwi+e2P6Un0bnQN36OJItZe3HZRfqW8aMNqp5XBfyYsMouGk4MPDXv0jzG0Zf8AQJ+aXDQHdew41yKyR21ONZbD0fD+DDU0743uZI1zHtNnNcLEH/n4rzKLRBVpSpPZkaOJfsZPsn8F6jvRJaeej4mLBP2DOg+0V2e9kvSHpEizbL4GayYxCVsdmF9yLk2sAAOPUi/MkI7RyztY3DabwWnZfZGSmqmS1D2XiJIjiDpXuu0tD3WHcN1uL7+aylhTwalp0e6U9uT8D3abZB9TVPlp5GB0pBdHK10TmgNDS9tx3bdOIedJU8vJ266PdWe3F4KttTgfaU4h4Vsl2NcbCxaToQ4cV7EjXd98U47LMu9tY0GknnJDLwUTd2NYXY3QAfN4d55gIXj8bDzqeit5u9EruSfgdXrPDUHNTPP/AJFcfnl4M+rh6BL319CKnkvtRGOSgd98oU5mHQUAQBAEAQBAEAQHP8WIi2ko3f39LNF52HhPwCAlK4cHjED+KanfF52OL/yUD0qp8zSpvbsZR5STObdkuk4LGXutYVMEbweIuj7h3oAavVVZR8z0rFumpcmQirnzxL7KGnFVG6qeGxMJfqCQ5zdWNJ4hfW/7oHGvdPytS/0f1aq5m924sM7IcYzSRWhrWjWNxuyZje9sTucBYc3GCCCpHszL9SNK9Xd0kiOoMFipmds4hoWuLWUwcOFke36ZHetGh6LHjAPlRUfKI6VrG2XW1nu3I82vxSGrZBUtLW1LgWTxtuQA0nK4np3X1IcORKjTR4v6lOtTjNbyo4l+xk+yfwUcd6KFr56PiYsE/YM6D7RXqe9k3SPpMjouxOzs8bm10jA2NsRk
+iBeMz3PaBGSGnRtnHeb7tFJTg1qaHR9nOnLrJcjpLWiFrWgF73utfQF7rEuc48WgPQAAFMa4I4djmuBY9jrbwSx4ALXNPHoQfPY8YQHOdtNl5pXOrYmtLXsD5W5wHNcxuV5aHaFtmjS/EVDUg3uMm+spVJdZDkUQKAwca4LJ2JqXhMWlk3inp8p5nSuFvPZrlZprun0XRcNmjl8ToFC3hMYnk4oYGRf5nuzH+vpXha1W/YfS1O5Ywj60m/kQ2Fjhdp6t4/7ekiiPTIWyf1U5mHRUAQBAEAQBAEAQHOey6wwOocSb/wBnUASf4Uxa1/4Af5kBObdRngYquLV1PI2XTjjOjh0WIUNZaKS4Gj0bJObpS3SWPjwK92XsJ7ZoosQp7ufS/KgN1zwyBvCDnsAHeYqTyo6cTMuaDkpU5eBzeGUPaHNNw4XCqy0PkKlN05OLNimge9wZG1z3uNmtaLuPQP8AllzDe47SpSqPZitS6DCYMLiE1VaWrcDwUTXWEf79xqLfT8zVPhQNqFKnZw25+UZqGtp8WY2CqyxVbRaOVoA4TjtY7+O7D0jm7lT0Z6p1aV5FwlpIqGN4NNSSGOZtj81wuWPHK08fRvChlBoyLm1nReJbufAhsTPyMn2T+CQ3o5aLNaPiYsDPyDPP7RXZ7yXpH0iRf9h8cnfKyjfI90UjHRtFg4xFrbscDa+UBtt/GFJTk3oXej7uc57EtTpzHiYBriWSsNyGnumO1GZt97SL2uLEFTG0HvbCC1pL5XkkAm73usBmNtzQALm1gAgOa7e41PHMaRkkjY2Rta7QN4Uvbdzr7y03tv3gqGrJrQxukbqdOexHQotVOI2Oe7c0X/IKGKyZNKm6s1FHU+xXhHaOHPqqgZZKi9RJfQtYAeDYb8jdbcrirXko+voUd1OPsRMbCRngJaqXR1RI6U34mbm+awJ6FHQWjk+Jo9IySqKlHdFY+PEhexJEZnV+Ik37cqCIzyxQlzWH7yPMFMZx
+0RAEAQBAEAQBAEBF7S4OyspZqWTvZWFt/one1w5wQD5kBVuxlixnpH4fVttUUf6PMx298YGVkmu9pGl+O1+MLjOxk4tNG1gc/acxw6o1jfc0z3ah7T30Tr8Yv9/QoIPq3sP4Gpc01c0+0U1rukv3OcbdbJvwuR00LS6hkdfTU0z3HvSP7vkPm6ZJ01LU+avbJVltLykfOzG0DqR5miDH52OaL7tdWuvv0I3aXuoYvZZk21eVrKW0jSrat8z3SSvL3uNy48fIByAcQ4l5k22Vq1aVWW1LeYQbbiQRqCDYg8RB4iubjxGTi8reTuMbVTVVNHBNY5HZjJ86Sws3MLaEXNyN+m7j9uplF6vfurR2GteLKpjT7QP57D0kLlPyjx0fHauImPZ594AOQuH33/qvVTeSdJxxcMs2zmOPo5TLGyNxLSwh44jrcEajUDpt5x5hLZIbS67PJvGSxbObYSy1McdYYXxvcRmcxrTGS0luVw3C4A1vv3qSFTLwzRtOkJ1KmzLcfW1O1skVQ6KiMTGMLbvYxrjIcocQ5xuC3W2mum9dnUw8I7e386U9iGMFZ2o2jdVPE04jYGMDe5va28kk6m5vpxbucxtuTKNetO7kkkbfY+2PdiMjKqpYW0cZzRMdoal4OjnD+7H39F1PCCRr2dmqKy/KZf8AHqg10/aEBPBsINU8bg0atjB4ySPu5iopy6x7C+J9FbwVrS7RPe/JX7mp2UcZ4ClZQUwHbFaRTRNBtkY7uHP5gAQ3pPMrCWDMlJttstezWDso6WGlj72Jgbf6R3ucecm586HCTQBAEAQBAEAQHhKAp21m1rmSdpUOV9UR3bjrHStPz5f3rd6zeehVbu7p21Nzn/0kp05TlhFWj2fdTvZVUkhNYy5fJISRVB2r2TcgdYWI72w5F8xb/wDoKirN1V3Hw5F+pZLZxHeW6lqqbF6ZzHB0csZtJG4gTU0nEeg2uHbnBfWJwqwUovKe5lShWnbTyviuZgp8
+XlpP0fEm54j3LajLmjc06ZZRxG3L9+9eVNw0lu5l2dtTuU6lDfxjx+BWNouxcNajB5WNDu6MDjeB9+ONwvk6N3QpXGMkYlxaRqd2otf1KDVVL4JOCrIZKeTkkHcu52v3OHOFBKk1uMOt0bUh5Oq/U2Wm4uDcc2oXh6Ga4tPD0C4PYQe00+jY+Xuj+A/r6FNSXE2uiKGW6j8D52Zn1ew8dnD8D/RKq4nrpelpGa4aMnlCYR45wAubAcp0C6svceoxcnhGGhkkqX8FRQyVD9xyC0bOd7zo0KSNJveadHoypPWeiOg7OdjFkVqrF5Y5CzuhEDlp4+dxNs56bDpUqUYI27W0jDu045f6lhmxaauvBQNMcA7l9QRYWG9sQ6OP8FE5yqaQ3czbhb0rXv19ZcI/yZK7EqfComU1Owy1ElyyJp+UkPHLK75jBxuPQL7l2c6dvTcpPCXEo1atW5qZe/6FYj2f4aSSpry2aolblJFxHCziihG9oH0u+vrpdfH3vTlWrNdVpFfr4/wXaVrGC72rJnZ/al9LKyjr3EtectNVO0D+SGc7my8QO53SvpejukYXcNNJLev4KNeg6UsF+C0iA9QBAEAQBAEBTeyrj09HQZ6WwlkkbEHEXLcwcS5o3Zu50vyrmcHG0k2yubIQQCla+ncXiTu3yOOaSSQ9+ZSdc4NxY7l+f9K1a87hqtw3Lh8DatlBQzDifNXiEzZzfg2RsYXZXONzd+RrnBgOYus7K0HiN7kgCSlbUZUdMtt4zj4v5cWJTakfU9I6UxVlLI6nqQxrmuI0exwuIqhgPds3843hSWfSNSwm6b70M/7g8VaEa0dpbycwrbiCV3amIxtpp3C2SSzoJhuvFIdCD9E2K+xoXFG5ht03lGa1OlLkzam2Wlp3GTDpjHfUwvJdC7o+iuuk46wZfhfU6q2bmOfat5q12OxPbwGMUQYDpdzBLATxEHXKePm5UVbGkkH0cqi2reSkuW5kFWdiukmBlwur
+fDf5odw0B/yk3Hp8yk7sjKuLT8NWGvgU/F9msTo7mal4Zgv8rTnOLD6TO+Ho9K8OinuMqp0VHPdeDn9TUmR5e46n7ubzL2kksGpQoxowUYnlNOWPa5u8EWHG793nvuRrKwdrU1Ug4PidFwnZTE6yxiphBGbHhKk5dP3Yx3R84868KlzMun0VBPM3kttJ2MKGmAlxOqdO4a5Xu4KHzMBu70+Ze24wWpq21n+GjAnqLHAW8Dg9G3INA/IIYG89rAu/FR9bKXkI1FYQpLNxLHsWrNuLZUynhcQndMRrwfeQM/y8fSV3qm/L1OSv1TWzbx2fbxIzEtrzJemwhkZDO4fUEfo0Nt7YwLcK8cg7kcZVW86Qo2i72/guJUhSqVntfqaNFQR0zZJXvc+RwL5ppDmlkygnU8TQL2aNAvjLq9rX1TD3cFwRp06UaMc/qYKvEJGPa97eDYdAHuaAzjc+XITfSwaLgZjrrZSUrWnKEoJ5kt+Pos/r+hyVRxw+Bmxp1O+leasAQEd1wgsd/c2G8OvYgb1DaKtTuEqOsvZuO1lTcG5Eh2HcWlnpJGyvkeIZjHG6T9rwWRjmCQ8bgDvX6FTbcVtbzETTWU8ovy9nQgCAIAgBQFA7M/8A0UPWovZkXipnZeCvdeYl4HMsOxCWkkMsIzNdbhYuKS3zmfRkA9OgKyryzp3UNiWjW5/yUOi+lXQ7k3oXuGaGug4WB7bua5gfa7onOBDgW8TwC7Q7rnl1+TlGtZVdiaeN+ODPslKNWO1Ej8/BAlvD8K2TcbtZkDg0ZiRlfnaBbfYuAGUN0vtddo8bLXxzv8Vh/ch8jdvJGogp66J0crWyNvlIIIGcNBJicbE2zDugqCdeympU37f+k72KscSK8yHFcK1oJjU0w/sJRncxvI0b/wCAj7JX09j07RrYjV7r/T7GdWtJR1iTuBdmOjnHBV0L6d251xwkN+MHTM3zt863NGtNxVTcXlaFih2eoKr5egnDHHdJTS3b
+0FoNvNoopUY5zHRl+n0lVS2amJL2/wA7z74TE6XvhHWMHG35Oa3RuP3rn9yO/U94s627MH80ReInCMQOSup+Bm5ZWmGUHmkbb7zquxrxej0I59HVYraj3lzR94fNhWH/ACdBTiWXd8i0yyE/vSuufv0SVaK0WrFPo6rJZn3VzZJWxOq446OM9EkxH4Bc/uT9hLmzoc5v5IwVGEYbQ/LV07HP+nUyAknkawnU8wBK7GjFavVkVXpKtJbMcRXJaEJiHZchLuAwullqpNws3g4mjdfXW3mA512pVp0o7U3hFJKU3pqzSOF1db3eK1GdtwRSw9xTttuzkayctiSF8xfdPt5jb/P+C/Rs1vmyZleIoyI4weDZdsbLNNhuAHENDxcXGsCCdaonUlverLjezHu/IhZ3SzBjmytLH6NJj7gSDdJHrnyG+Uk3HNlJtp0407dvMdV7dccnwzxX8kEtqZ5XV0VCxj53OfLkLIoGEP32zCO4Diy7W90++UaLlKlVvJONFYjnLlu+ft8DlWpChHaqMp9dVS1UglqSLt/ZxN/ZxX4/3n/vHzWX0ltaU7WGxT+L4s+P6R6VncScY+SdJ7Cv7Cr6yfcxLSh5Jo2XmI+B0Zey0EAQBAEAQFA7NB/Qob/WovZkXmW4guk3Rkkc/wBntmqvEAX0wayJoNppQcsjhfuIwNSL6F+4c6ijT5mZbdFprNQjKZ9TS1YZG3gqoyRwyQvNopTI4NaTbQgm1pByqtc2ULiPV1F4Piv95F6ylXtauxnMeB0Gkr46h3AzRmOoiOZ0EvfNNiA8DdIzfZwuOhfI3VjcWMv8XxXL9j6SnVp1UuZpupxTPL5AXloAic8i0ksrrG7t0fdOtbcA5ztSdJVUdzBRhpneuKS+vic2diWX8DajxF8TTwoe/K3PIcrWvibcglwDrPbcEty62ad5GsE7WnUf9vTOi5P+Pae41JLeeYpgNJVOcXNZwrdC+NwbK3kBI39Drhct767tEsN7
+PJ7jk6NOpq95Vq3YGaMl9JKA/icxzqWb+KPuHH/KPMt23/8AR05aVY48NSpOxktYvJsYftdjdF3MzHzxjfw0Tnm3+LT3PnIK1qfSFvU3TXzwVpUJx3osMfZQw6cCPEIWsOl7gTMB9AeOnKrCnCpwOwqVaTzBtP2GCfsr0FOODwyjkmPFkj4JpPPoXn+Feswp8UjlSrUqvM22yDq9psfrriOI0sZ+gBE63PJIcwPOAFUrdKWtLypr4anY29WW5Gvh/YzL3cLX1L5HHeGuLieZ0r+6PmAWJc/+j4UI/F/wWoWPrsu+G4bBSsyQxsjaSAbCxcSQBmcdXEmw1Xz9W4r3U8zbZdjCFNaaGtU4q6zXMZIIyQM+S5fmIEbYxewzG4zOtbTTW4sUrOGZKTTlyzu558OR5lUfI+I3SOcGtF5YyQJdCzIRqyYtOrgdC0a3AcLBSNU4LMvJf4eOea/32HnMnuNWke6SV0GHMbNUXIlnOlPT5tXXtpcnXg2bzqddVpWnRta6xKt3aa3Li/H+SCpXhTzs7ynyYbM7EJ6WIuqarhCzO/SzGht3vPzImlx0HMBcr6OFCNNKEFiKPn7yjUuayUn3cak9tDsHV0UYma81UYbeXK20kTvnOY0d/HzbxbjUkqemhDcdGwnH+1o1+pZ+wfK19PVOaQQam4I4/kYl6huLlrBwpRizpK9lgIAgCAIAgI3HcDp6yMRVUQkY17ZA0kgZm3sTYi41Oh0N0BIRsDQGtAAAsABYADcAOIICIxrZimqpIJZ4w6Sne2SN4Ja4FrswBI3tuAcp00QH1tBs7BWMDZ2XLTdkjSWSxu+kx41afuPGvMoqSwzqeCl4jh1dRgiSM11PqC+NoFS1v/yQ7pRbeW6nkWBd9BRk+st3sv8AT7FyldtaT1I6hFNUteKWcgEAOiFhlc1oawOY4Z2AZR3IsDbpvjVJXNtJdfDOOP11/ctLq5rMWYqpj2ZA9jYmANYDmcA0N7p7TLHq1jnN
+js51j3+7cZaUqc03GW09+P3w+K5I41JbyZqJXRU7nNOYsaT3Ti+9t7MwsTyA7911lwjGrXSksJ/D4lhvEdDW+HA1zmyMDSw5XlkjXgO4PhO90da3Hb81YfR7a2oPKeq0xxxvPCrLOpt1GJxtdldnv3I0je/V98o7kHU2Oir07atJZi/1xuPe3EywVjHZcjtHs4RtgQC0EC+794elRzo1I5zwePiFOD1NN2ORWaQSc8bpGaEB2TvmAnc8fROqnjYVXnPB4+/h7Ty6ySPiCvklaBZkfCiRsb2uzlj2XFnBzbE6E8nclSTtqVKXPZxlPTKfI8qpJrQ0KZhmY0NJEzXsLrPfKWZZAXiYuAaSHA9wLW4rK5OUaM9rHdw+GM8sfyeEm1hbz2smiiLYpnmV/dZKWFpke4uBbYNHdZdTbNYC+82BC3o1q8s0IYzjvP8A3/p5nOEPKefYTGHbJVNU0CrtS01rCmhPyr28QllbowcrGfxLftOiKdGXWVO9Lm/2RTq3MpaR0RfMNw+KnjbFBGyONujWtFgFrlYx0OEwwvlkiiYx8zs8jgNXuta5P9OnlQG6gNaiw+KHNwUcbM7i9+Robmed7jbedBqgNpAEAQBAEAQBAEAQBAeWQEFjmx9HVnPLCBJxSxkxTDk+UZZ3mK8yipLEllHU8bivTbI10H/S1bKhn0KxpD7cgmiH3lpWVcdCW1V5itl+wsQupx36kXUy1MTctVhtSGggl1OW1LLhwcDZhD94v3qyqvQFxGW1Tmn46MsxvIPykRTsXw+S47abE8iUO4VvBvIl3giQNNgQ2w/dtxqBW99R0lTbWm72HtTpPVMk6eaN2V5qqdx4VsjixzWtsxha1rRmJ5DqTxqlNVI5SptaNL4vJItl8UYIKeGFgtUQBwhfEXGQEZnFpa6xdoBY6C29STq1aj1g8ZT3cjijFLGTSfW4cwlpqmSNLcvBtc6Z5dZou3JdwPcxkW3FtwrUYX1TyaeHnfu0I80o
+rWRvYZHK4g0dBWyG1g+oJp4h3IaXWkNwSBqWsudeVW10TdV1itJJPlqyJ3NOPkk5T7G1s/8A1lYIWHfFRgtPODPJd3naAtG36GtqOMraft/ghndTl7C0YDs3S0bSKaFjCe+f30j7cb5DdzvOeNaqiksIr5Jay6cPUAQBAEAQBAEAQBAEAQBAEAQBAEAQHiAxT0zH6PYx32mh34oCNm2Xonm7qOlJ5TEz8lwHy3ZKhGooqUf/AEs/JdywSVLRRx6Rxxs+y0N/AIDOuAID1dAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAf/2Q==</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>d8de6d22-f927-4ecc-99bc-2281472e2291</rd:ReportID>
+</Report>

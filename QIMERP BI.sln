@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "QIMERP BI", "QIMERP BI\QIMERP BI.rptproj", "{7494DA84-CE6C-48FA-A503-33993921AF50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7494DA84-CE6C-48FA-A503-33993921AF50}.Debug|Default.ActiveCfg = Debug
+		{7494DA84-CE6C-48FA-A503-33993921AF50}.Debug|Default.Build.0 = Debug
+		{7494DA84-CE6C-48FA-A503-33993921AF50}.Debug|Default.Deploy.0 = Debug
+		{7494DA84-CE6C-48FA-A503-33993921AF50}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{7494DA84-CE6C-48FA-A503-33993921AF50}.DebugLocal|Default.Build.0 = DebugLocal
+		{7494DA84-CE6C-48FA-A503-33993921AF50}.Release|Default.ActiveCfg = Release
+		{7494DA84-CE6C-48FA-A503-33993921AF50}.Release|Default.Build.0 = Release
+		{7494DA84-CE6C-48FA-A503-33993921AF50}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E2600BE-4B8A-48E6-A871-B8AFF37205FA}
+	EndGlobalSection
+EndGlobal
