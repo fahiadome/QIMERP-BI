@@ -11,14 +11,16 @@
   </DataSources>
   <DataSets>
     <DataSet Name="dsGetStaffProfile">
-      <SharedDataSet>
-        <SharedDataSetReference>dsStaffHeader</SharedDataSetReference>
+      <Query>
+        <DataSourceName>QIMERPDATA</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@staffId">
             <Value>=Parameters!staffId.Value</Value>
           </QueryParameter>
         </QueryParameters>
-      </SharedDataSet>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>ProcReportGetStaffById</CommandText>
+      </Query>
       <Fields>
         <Field Name="SalaryGradeId">
           <DataField>SalaryGradeId</DataField>
@@ -52,8 +54,12 @@
           <DataField>OrganizationalUnitId</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="JobTitle">
-          <DataField>JobTitle</DataField>
+        <Field Name="Rank">
+          <DataField>Rank</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StaffCategory">
+          <DataField>StaffCategory</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="JobTitleId">
@@ -507,7 +513,7 @@
                 <TextRuns>
                   <TextRun>
                     <Label>StaffJobTitle</Label>
-                    <Value>=First(Fields!JobTitle.Value, "dsGetStaffProfile")</Value>
+                    <Value>=First(Fields!Rank.Value, "dsGetStaffProfile")</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
                       <FontSize>12pt</FontSize>
@@ -2043,7 +2049,7 @@ Reviewer, Mineral Processing and Extractive Metallurgy, IMM, Transactions C</Val
             <Top>1.16542in</Top>
             <Left>0.02431in</Left>
             <Height>11.96652in</Height>
-            <Width>7.77901in</Width>
+            <Width>7.779in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>

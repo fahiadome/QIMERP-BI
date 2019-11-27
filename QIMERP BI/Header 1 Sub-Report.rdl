@@ -633,8 +633,12 @@
           <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
         <Field Name="ShowInvoiceMessagefooter">
-          <DataField>ShowInvoiceMessagefooter</DataField>
+          <DataField>ShowInvoiceMessageFooter</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CompanyLogo">
+          <DataField>CompanyLogo</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
@@ -776,10 +780,11 @@
             </Style>
           </Line>
           <Image Name="Image1">
-            <Source>Embedded</Source>
-            <Value>Logo</Value>
+            <Source>Database</Source>
+            <Value>=First(Fields!CompanyLogo.Value, "dsCompanyHeader1")</Value>
+            <MIMEType>image/png</MIMEType>
             <Sizing>Fit</Sizing>
-            <Height>0.60014in</Height>
+            <Height>0.64181in</Height>
             <Width>0.68722in</Width>
             <ZIndex>3</ZIndex>
             <Style>

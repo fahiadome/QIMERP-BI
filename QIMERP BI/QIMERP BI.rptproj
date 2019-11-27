@@ -76,6 +76,7 @@
     <Report Include="Purchase Order Report.rdl" />
     <Report Include="Requisition Report.rdl" />
     <Report Include="Sales Receipt Report.rdl" />
+    <Report Include="Start Report.rdl" />
     <Report Include="Stock Quantity Adjustment Report.rdl" />
     <Report Include="Stock Report.rdl" />
     <Report Include="Stock Transaction Report.rdl" />

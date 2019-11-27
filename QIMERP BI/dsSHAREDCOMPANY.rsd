@@ -630,7 +630,7 @@
         <DataField>Chkno</DataField>
         <rd:TypeName>System.Boolean</rd:TypeName>
       </Field>
-      <Field Name="ShowInvoiceMessagefooter">
+      <Field Name="ShowInvoiceMessageFooter">
         <DataField>ShowInvoiceMessageFooter</DataField>
         <rd:TypeName>System.Boolean</rd:TypeName>
       </Field>

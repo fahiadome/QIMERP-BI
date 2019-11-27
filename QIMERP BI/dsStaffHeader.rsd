@@ -12,7 +12,7 @@
         </DataSetParameter>
       </DataSetParameters>
       <CommandType>StoredProcedure</CommandType>
-      <CommandText>ReportGetStaffById</CommandText>
+      <CommandText>ProcReportGetStaffById</CommandText>
     </Query>
     <Fields>
       <Field Name="SalaryGradeId">
@@ -47,8 +47,12 @@
         <DataField>OrganizationalUnitId</DataField>
         <rd:TypeName>System.Int32</rd:TypeName>
       </Field>
-      <Field Name="JobTitle">
-        <DataField>JobTitle</DataField>
+      <Field Name="Rank">
+        <DataField>Rank</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="StaffCategory">
+        <DataField>StaffCategory</DataField>
         <rd:TypeName>System.String</rd:TypeName>
       </Field>
       <Field Name="JobTitleId">
