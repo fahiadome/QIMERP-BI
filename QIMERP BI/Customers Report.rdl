@@ -3,8 +3,8 @@
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="dsMain">
-      <DataSourceReference>QIMERP DATASOURCE</DataSourceReference>
+    <DataSource Name="QIMERPDATA">
+      <DataSourceReference>QIMERPDATA</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>463f3f62-a114-4d4f-b4a8-6f1354b2a9da</rd:DataSourceID>
     </DataSource>
@@ -12,7 +12,7 @@
   <DataSets>
     <DataSet Name="CustomerDataset">
       <Query>
-        <DataSourceName>dsMain</DataSourceName>
+        <DataSourceName>QIMERPDATA</DataSourceName>
         <CommandText>SELECT        CustomerCode, CustomerName, PrimaryPhone, Email, SalespersonStaffId, CustomerGroupId, CustomerTypeId, CustomerGroupName, CustomerGroupWebsite, PhoneNumber, Address, CustomerTypeName, TotalBalance, 
                          PaymentMade, BalanceDue
 FROM            CustomerWithBalance</CommandText>

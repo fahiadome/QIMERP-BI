@@ -13,10 +13,16 @@
     <DataSet Name="dsStockReport">
       <Query>
         <DataSourceName>dsStockReport</DataSourceName>
-        <CommandText>SELECT
-*  
-FROM
-  ViewItem</CommandText>
+        <CommandText>SELECT UnitCost, UniPrice, QuantityOnHand, WarehouseId, Warehouse, Location, LocationGroup, LocationType, ItemId, PurchaseCode, ItemCode, ItemGroupId, ItemTypeId, ItemCategoryId, Name, RecordParentCode, NumberOfAncestor, 
+                  InventoryAccountId, Description, RegistrationNumber, SerialNumber, WarrantyExpireDate, AcquiredAsNew, IsActive, CartonTypeId, PiecesInCarton, ExpireDate, InventoryDate, PurchaseDate, CostDescription, COGSAccountId, 
+                  PreferredVendorId, CostIsTaxIncluded, CostTaxItemd, Color, FinishedGoodsFlag, UnitOfMeasureId, Class, DateSold, PricePercent, SalesDescription, ScrapAccountId, AdjustmentAccountId, IncomeAccountId, SalesIsTaxIncluded, 
+                  SalesTaxItemd, IsSellableItem, IsTrackingSerialNumber, CreateDate, CreateBy, LastModifiedDate, LastModifiedBy, ReorderPoint, ItemClassId, Length, Width, Height, SizeUnitOfMeasure, Weight, WeightUnitOfMeasure, AssetNumber, 
+                  FixedAssetClassId, ChaseNumber, DepreciationRate, VehicleBrandTypeId, VehicleManufacturerId, VehicleManufacturerYear, VehicleEngineSize, VehicleEngineCylinder, VehicleTransmissionTypeId, VehicleTransmissionGear, 
+                  VehicleStandardSeating, VehicleSteeringTypeId, VehicleEngine, VehicleCityMileage, VehicleHighwayMileage, VehicleCityMileageUnitOfMeasureId, VehicleHighwayMileageUnitOfMeasureId, VehicleDoor, VehicleTypeId, VehicleModel, 
+                  VehicleSizeTypeId, VehicleCategoryId, VehicleFuelTypeId, VehicleFuelCapacity, VehicleFuelCapacityUnitOfMeasureId, IsVehicle, ItemType, IsSystemDefault, UnitOfMeasure, UnitOfMeasureFullName, UnitOfMeasureTypeId, ItemCategory, 
+                  IsFixedAssetItemCategory, IsSystemDefaultUnitOfMeasure, UnitOfMeasureType, ItemGroup, IsFixedAssetItemClass, IsSystemDefaultItemClass, ItemClass, COGSAccountFullName, IncomeAccountFullName, 
+                  InventoryAccountFullName
+FROM     ViewItemDetail</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/ReportingServices/QueryDefinition/Relational">
             <SelectedColumns>
@@ -126,16 +132,36 @@ FROM
         </rd:DesignerState>
       </Query>
       <Fields>
+        <Field Name="UnitCost">
+          <DataField>UnitCost</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
         <Field Name="ItemId">
           <DataField>ItemId</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="UniPrice">
+          <DataField>UniPrice</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="WarehouseId">
+          <DataField>WarehouseId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="PurchaseCode">
           <DataField>PurchaseCode</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Warehouse">
+          <DataField>Warehouse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ItemCode">
           <DataField>ItemCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Location">
+          <DataField>Location</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ItemGroupId">
@@ -146,9 +172,17 @@ FROM
           <DataField>ItemTypeId</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="LocationGroup">
+          <DataField>LocationGroup</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ItemCategoryId">
           <DataField>ItemCategoryId</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LocationType">
+          <DataField>LocationType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Name">
           <DataField>Name</DataField>
@@ -202,14 +236,6 @@ FROM
           <DataField>QuantityOnHand</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="QuantityOnOrder">
-          <DataField>QuantityOnOrder</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="QuantityOnSalesOrder">
-          <DataField>QuantityOnSalesOrder</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="ExpireDate">
           <DataField>ExpireDate</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
@@ -225,14 +251,6 @@ FROM
         <Field Name="CostDescription">
           <DataField>CostDescription</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="AverageCost">
-          <DataField>AverageCost</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="UnitCost">
-          <DataField>UnitCost</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="COGSAccountId">
           <DataField>COGSAccountId</DataField>
@@ -269,10 +287,6 @@ FROM
         <Field Name="DateSold">
           <DataField>DateSold</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="Price">
-          <DataField>Price</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="PricePercent">
           <DataField>PricePercent</DataField>
@@ -531,50 +545,16 @@ FROM
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
-      <Filters>
-        <Filter>
-          <FilterExpression>=Fields!PurchaseDate.Value</FilterExpression>
-          <Operator>Between</Operator>
-          <FilterValues>
-            <FilterValue>=Parameters!DateFrom.Value</FilterValue>
-            <FilterValue>=Parameters!DateTo.Value</FilterValue>
-          </FilterValues>
-        </Filter>
-      </Filters>
     </DataSet>
     <DataSet Name="dsWarehouse">
       <Query>
         <DataSourceName>dsStockReport</DataSourceName>
-        <CommandText>select * from ViewWarehouse
-</CommandText>
+        <CommandText>SELECT DISTINCT Warehouse, WarehouseId
+FROM     ViewItemDetail</CommandText>
       </Query>
       <Fields>
         <Field Name="Warehouse">
           <DataField>Warehouse</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="LastModifiedBy">
-          <DataField>LastModifiedBy</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="LastModifiedDate">
-          <DataField>LastModifiedDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="CreateDate">
-          <DataField>CreateDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="Location">
-          <DataField>Location</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="LocationGroup">
-          <DataField>LocationGroup</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="LocationType">
-          <DataField>LocationType</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="WarehouseId">
@@ -617,13 +597,13 @@ FROM
                   <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.96181in</Width>
+                  <Width>0.65348in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.92014in</Width>
+                  <Width>1.06181in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.00347in</Width>
+                  <Width>1.0618in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -642,7 +622,7 @@ FROM
                                   <Label>StockReport</Label>
                                   <Value>="Stock Report:  "</Value>
                                   <Style>
-                                    <FontFamily>calibri</FontFamily>
+                                    <FontFamily>Arial</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -651,7 +631,7 @@ FROM
                                   <Label>Warehouse</Label>
                                   <Value>=Fields!ItemGroupId.Value</Value>
                                   <Style>
-                                    <FontFamily>calibri</FontFamily>
+                                    <FontFamily>Arial</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -660,7 +640,7 @@ FROM
                                   <Label>From</Label>
                                   <Value>=" From: "</Value>
                                   <Style>
-                                    <FontFamily>calibri</FontFamily>
+                                    <FontFamily>Arial</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -669,7 +649,7 @@ FROM
                                   <Label>DateFrom</Label>
                                   <Value>=Parameters!DateFrom.Value</Value>
                                   <Style>
-                                    <FontFamily>calibri</FontFamily>
+                                    <FontFamily>Arial</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -678,7 +658,7 @@ FROM
                                   <Label>To</Label>
                                   <Value>=" To "</Value>
                                   <Style>
-                                    <FontFamily>calibri</FontFamily>
+                                    <FontFamily>Arial</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -687,7 +667,7 @@ FROM
                                   <Label>DateTo</Label>
                                   <Value>=Parameters!DateTo.Value</Value>
                                   <Style>
-                                    <FontFamily>calibri</FontFamily>
+                                    <FontFamily>Arial</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -740,7 +720,9 @@ FROM
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox26</rd:DefaultName>
@@ -787,11 +769,14 @@ FROM
                                 <TextRun>
                                   <Value>Item Code</Value>
                                   <Style>
+                                    <FontFamily>Arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox1</rd:DefaultName>
@@ -843,7 +828,9 @@ FROM
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox17</rd:DefaultName>
@@ -890,11 +877,14 @@ FROM
                                 <TextRun>
                                   <Value>Name</Value>
                                   <Style>
+                                    <FontFamily>Arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -946,7 +936,9 @@ FROM
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox29</rd:DefaultName>
@@ -993,11 +985,14 @@ FROM
                                 <TextRun>
                                   <Value>Quantity</Value>
                                   <Style>
+                                    <FontFamily>Arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -1050,7 +1045,7 @@ FROM
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1104,7 +1099,7 @@ FROM
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1148,14 +1143,14 @@ FROM
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox27">
+                        <Textbox Name="Warehouse">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!Warehouse.Value</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                   </Style>
@@ -1164,7 +1159,7 @@ FROM
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox27</rd:DefaultName>
+                          <rd:DefaultName>Warehouse</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -1207,7 +1202,9 @@ FROM
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!ItemCode.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1307,7 +1304,9 @@ FROM
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Name.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1348,14 +1347,14 @@ FROM
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="InventoryDate">
+                        <Textbox Name="CreateDate">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!InventoryDate.Value</Value>
+                                  <Value>=Fields!CreateDate.Value</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <Format>d MMM yyyy</Format>
@@ -1365,7 +1364,7 @@ FROM
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>InventoryDate</rd:DefaultName>
+                          <rd:DefaultName>CreateDate</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -1388,7 +1387,9 @@ FROM
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!QuantityOnHand.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1443,7 +1444,7 @@ FROM
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1489,14 +1490,14 @@ FROM
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Price.Value</Value>
+                                  <Value>=Fields!UniPrice.Value</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1716,7 +1717,7 @@ FROM
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Price.Value)</Value>
+                                  <Value>=Sum(Fields!UniPrice.Value)</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -1796,7 +1797,7 @@ FROM
             <DataSetName>dsStockReport</DataSetName>
             <Top>0.57167in</Top>
             <Height>1.0625in</Height>
-            <Width>10.31251in</Width>
+            <Width>10.20418in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -1868,7 +1869,7 @@ FROM
   </ReportSections>
   <ReportParameters>
     <ReportParameter Name="Warehouse">
-      <DataType>String</DataType>
+      <DataType>Integer</DataType>
       <Prompt>Select Warehouse</Prompt>
       <ValidValues>
         <DataSetReference>

@@ -14,8 +14,16 @@
         <DataField>Name</DataField>
         <rd:TypeName>System.String</rd:TypeName>
       </Field>
+      <Field Name="LegelName">
+        <DataField>LegelName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
       <Field Name="AddressLine1">
         <DataField>AddressLine1</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="LegelAddress">
+        <DataField>LegelAddress</DataField>
         <rd:TypeName>System.String</rd:TypeName>
       </Field>
       <Field Name="AddressLine2">
@@ -26,12 +34,24 @@
         <DataField>CityId</DataField>
         <rd:TypeName>System.Int32</rd:TypeName>
       </Field>
+      <Field Name="LegelRegionId">
+        <DataField>LegelRegionId</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="LegalCountryId">
+        <DataField>LegalCountryId</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
       <Field Name="DBA">
         <DataField>DBA</DataField>
         <rd:TypeName>System.String</rd:TypeName>
       </Field>
       <Field Name="CountryId">
         <DataField>CountryId</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Slogan">
+        <DataField>Slogan</DataField>
         <rd:TypeName>System.String</rd:TypeName>
       </Field>
       <Field Name="CompanyNumber">

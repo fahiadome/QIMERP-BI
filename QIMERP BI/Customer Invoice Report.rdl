@@ -3,21 +3,16 @@
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="QIMDATASOURCE">
-      <DataSourceReference>QIMERP DATASOURCE</DataSourceReference>
-      <rd:SecurityType>None</rd:SecurityType>
-      <rd:DataSourceID>05e58855-7bdc-4555-acd0-12f7296fec77</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="dsGetInvoice">
+    <DataSource Name="QIMERPDATA">
       <DataSourceReference>QIMERPDATA</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
-      <rd:DataSourceID>03c63078-8425-4b56-974b-f1b65eb9f095</rd:DataSourceID>
+      <rd:DataSourceID>05e58855-7bdc-4555-acd0-12f7296fec77</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="dsGetInvoice">
       <Query>
-        <DataSourceName>dsGetInvoice</DataSourceName>
+        <DataSourceName>QIMERPDATA</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@InvoiceId">
             <Value>=Parameters!InvoiceId.Value</Value>
@@ -258,9 +253,21 @@
           <DataField>Warehouse</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="InvoiceItemId">
+          <DataField>InvoiceItemId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
         <Field Name="LocationId">
           <DataField>LocationId</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="UnitOfMeasureId">
+          <DataField>UnitOfMeasureId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemId">
+          <DataField>ItemId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
         <Field Name="CustomerFullName">
           <DataField>CustomerFullName</DataField>
@@ -270,17 +277,37 @@
           <DataField>AccountNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="PrimaryPhone">
           <DataField>PrimaryPhone</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UnitCost">
+          <DataField>UnitCost</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="Website">
           <DataField>Website</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="UnitPrice">
+          <DataField>UnitPrice</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
         <Field Name="OtherPhone">
           <DataField>OtherPhone</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ServiceDate">
+          <DataField>ServiceDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="Email">
           <DataField>Email</DataField>
@@ -288,6 +315,202 @@
         </Field>
         <Field Name="Fax">
           <DataField>Fax</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SalesRevenueAccountId">
+          <DataField>SalesRevenueAccountId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="COSAccountId">
+          <DataField>COSAccountId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="InventoryAccountId">
+          <DataField>InventoryAccountId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="PurchaseCode">
+          <DataField>PurchaseCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemCode">
+          <DataField>ItemCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemGroupId">
+          <DataField>ItemGroupId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemTypeId">
+          <DataField>ItemTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ItemCategoryId">
+          <DataField>ItemCategoryId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RegistrationNumber">
+          <DataField>RegistrationNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SerialNumber">
+          <DataField>SerialNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="WarrantyExpireDate">
+          <DataField>WarrantyExpireDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="AcquiredAsNew">
+          <DataField>AcquiredAsNew</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CartonTypeId">
+          <DataField>CartonTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PiecesInCarton">
+          <DataField>PiecesInCarton</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Class">
+          <DataField>Class</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateSold">
+          <DataField>DateSold</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PricePercent">
+          <DataField>PricePercent</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SalesDescription">
+          <DataField>SalesDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ScrapAccountId">
+          <DataField>ScrapAccountId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="AdjustmentAccountId">
+          <DataField>AdjustmentAccountId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="IncomeAccountId">
+          <DataField>IncomeAccountId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="SalesIsTaxIncluded">
+          <DataField>SalesIsTaxIncluded</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="SalesTaxItemd">
+          <DataField>SalesTaxItemd</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IsSellableItem">
+          <DataField>IsSellableItem</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="IsTrackingSerialNumber">
+          <DataField>IsTrackingSerialNumber</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ItemClassId">
+          <DataField>ItemClassId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Length">
+          <DataField>Length</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Width">
+          <DataField>Width</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Height">
+          <DataField>Height</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SizeUnitOfMeasure">
+          <DataField>SizeUnitOfMeasure</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Weight">
+          <DataField>Weight</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="WeightUnitOfMeasure">
+          <DataField>WeightUnitOfMeasure</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AssetNumber">
+          <DataField>AssetNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FixedAssetClassId">
+          <DataField>FixedAssetClassId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ChaseNumber">
+          <DataField>ChaseNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DepreciationRate">
+          <DataField>DepreciationRate</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="IsSystemDefault">
+          <DataField>IsSystemDefault</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="UnitOfMeasure">
+          <DataField>UnitOfMeasure</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UnitOfMeasureFullName">
+          <DataField>UnitOfMeasureFullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UnitOfMeasureTypeId">
+          <DataField>UnitOfMeasureTypeId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ItemCategory">
+          <DataField>ItemCategory</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsSystemDefaultUnitOfMeasure">
+          <DataField>IsSystemDefaultUnitOfMeasure</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="UnitOfMeasureType">
+          <DataField>UnitOfMeasureType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemGroup">
+          <DataField>ItemGroup</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemClass">
+          <DataField>ItemClass</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="COGSAccountFullName">
+          <DataField>COGSAccountFullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IncomeAccountFullName">
+          <DataField>IncomeAccountFullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="InventoryAccountFullName">
+          <DataField>InventoryAccountFullName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -1295,14 +1518,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox2">
+                        <Textbox Name="ItemId">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!ItemId.Value</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -1314,7 +1537,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <rd:DefaultName>ItemId</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -1356,7 +1579,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!Name.Value</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -1401,14 +1624,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox8">
+                        <Textbox Name="UnitCost">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!UnitPrice.Value</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -1420,7 +1643,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <rd:DefaultName>UnitCost</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -2856,7 +3079,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Label>COMPANY NAME</Label>
-                                  <Value>=UCase(First(Fields!Name.Value))</Value>
+                                  <Value>=UCase(First(Fields!Name.Value, "DSCOMPANY"))</Value>
                                   <Style>
                                     <FontFamily>calibri</FontFamily>
                                     <FontSize>14pt</FontSize>
@@ -2893,39 +3116,10 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox58">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox58</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox45">
@@ -2942,8 +3136,7 @@
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Label>INVOICENUMBER</Label>
-                                  <Value>=First(Fields!InvoiceId.Value, "dsGetInvoice")</Value>
+                                  <Value>=Fields!InvoiceId.Value</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -2964,8 +3157,7 @@
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Label>ENTER DATE</Label>
-                                  <Value>=First(Fields!InvoiceDate.Value, "DSMAIN")</Value>
+                                  <Value>=Fields!InvoiceDate.Value</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -3023,7 +3215,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Label>Customer Name</Label>
-                                  <Value>= First(Fields!CustomerFullName.Value, "dsGetInvoice")</Value>
+                                  <Value>=Fields!CustomerName.Value</Value>
                                   <Style>
                                     <FontStyle>Normal</FontStyle>
                                     <FontFamily>Calibri</FontFamily>
@@ -3040,7 +3232,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Label>Street Address</Label>
-                                  <Value>=First(Fields!BillToAddressCity.Value, "dsGetInvoice")</Value>
+                                  <Value>=Fields!ShipToAddressNote.Value</Value>
                                   <Style>
                                     <FontStyle>Normal</FontStyle>
                                     <FontFamily>Calibri</FontFamily>
@@ -3168,7 +3360,7 @@
                 <TablixMember />
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DSCOMPANY</DataSetName>
+            <DataSetName>dsGetInvoice</DataSetName>
             <Height>1.96973in</Height>
             <Width>7.44791in</Width>
             <ZIndex>2</ZIndex>
@@ -3292,7 +3484,7 @@
                 <TextRuns>
                   <TextRun>
                     <Label>PhoneNumber</Label>
-                    <Value>=First(Fields!PhoneNumber.Value, "DSCOMPANY")</Value>
+                    <Value>=First(Fields!Voice.Value, "DSCOMPANY")</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Calibri</FontFamily>
@@ -3411,7 +3603,7 @@
         <Height>5.51014in</Height>
         <Style />
       </Body>
-      <Width>7.48736in</Width>
+      <Width>7.49569in</Width>
       <Page>
         <PageFooter>
           <Height>0.37402in</Height>
@@ -3513,32 +3705,23 @@
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="InvoiceNumber">
+    <ReportParameter Name="InvoiceId">
       <DataType>Integer</DataType>
       <DefaultValue>
         <Values>
-          <Value>3000512</Value>
+          <Value>3001016</Value>
         </Values>
       </DefaultValue>
-      <Prompt>Invoice Number</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="InvoiceId">
-      <DataType>Integer</DataType>
       <Prompt>Invoice Id</Prompt>
     </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfColumns>3</NumberOfColumns>
       <NumberOfRows>2</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>InvoiceNumber</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
           <RowIndex>0</RowIndex>
           <ParameterName>InvoiceId</ParameterName>
         </CellDefinition>
