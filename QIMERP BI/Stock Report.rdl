@@ -13,15 +13,7 @@
     <DataSet Name="dsStockReport">
       <Query>
         <DataSourceName>dsStockReport</DataSourceName>
-        <CommandText>SELECT UnitCost, UniPrice, QuantityOnHand, WarehouseId, Warehouse, Location, LocationGroup, LocationType, ItemId, PurchaseCode, ItemCode, ItemGroupId, ItemTypeId, ItemCategoryId, Name, RecordParentCode, NumberOfAncestor, 
-                  InventoryAccountId, Description, RegistrationNumber, SerialNumber, WarrantyExpireDate, AcquiredAsNew, IsActive, CartonTypeId, PiecesInCarton, ExpireDate, InventoryDate, PurchaseDate, CostDescription, COGSAccountId, 
-                  PreferredVendorId, CostIsTaxIncluded, CostTaxItemd, Color, FinishedGoodsFlag, UnitOfMeasureId, Class, DateSold, PricePercent, SalesDescription, ScrapAccountId, AdjustmentAccountId, IncomeAccountId, SalesIsTaxIncluded, 
-                  SalesTaxItemd, IsSellableItem, IsTrackingSerialNumber, CreateDate, CreateBy, LastModifiedDate, LastModifiedBy, ReorderPoint, ItemClassId, Length, Width, Height, SizeUnitOfMeasure, Weight, WeightUnitOfMeasure, AssetNumber, 
-                  FixedAssetClassId, ChaseNumber, DepreciationRate, VehicleBrandTypeId, VehicleManufacturerId, VehicleManufacturerYear, VehicleEngineSize, VehicleEngineCylinder, VehicleTransmissionTypeId, VehicleTransmissionGear, 
-                  VehicleStandardSeating, VehicleSteeringTypeId, VehicleEngine, VehicleCityMileage, VehicleHighwayMileage, VehicleCityMileageUnitOfMeasureId, VehicleHighwayMileageUnitOfMeasureId, VehicleDoor, VehicleTypeId, VehicleModel, 
-                  VehicleSizeTypeId, VehicleCategoryId, VehicleFuelTypeId, VehicleFuelCapacity, VehicleFuelCapacityUnitOfMeasureId, IsVehicle, ItemType, IsSystemDefault, UnitOfMeasure, UnitOfMeasureFullName, UnitOfMeasureTypeId, ItemCategory, 
-                  IsFixedAssetItemCategory, IsSystemDefaultUnitOfMeasure, UnitOfMeasureType, ItemGroup, IsFixedAssetItemClass, IsSystemDefaultItemClass, ItemClass, COGSAccountFullName, IncomeAccountFullName, 
-                  InventoryAccountFullName
+        <CommandText>SELECT  *
 FROM     ViewItemDetail</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/ReportingServices/QueryDefinition/Relational">
@@ -545,6 +537,23 @@ FROM     ViewItemDetail</CommandText>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
+      <Filters>
+        <Filter>
+          <FilterExpression>=Fields!WarehouseId.Value</FilterExpression>
+          <Operator>In</Operator>
+          <FilterValues>
+            <FilterValue>=Parameters!WarhouseId.Value</FilterValue>
+          </FilterValues>
+        </Filter>
+        <Filter>
+          <FilterExpression>=Fields!CreateDate.Value</FilterExpression>
+          <Operator>Between</Operator>
+          <FilterValues>
+            <FilterValue>=Parameters!DateFrom.Value</FilterValue>
+            <FilterValue>=Parameters!DateTo.Value</FilterValue>
+          </FilterValues>
+        </Filter>
+      </Filters>
     </DataSet>
     <DataSet Name="dsWarehouse">
       <Query>
@@ -571,7 +580,7 @@ FROM     ViewItemDetail</CommandText>
           <Subreport Name="Header_Sub_Report">
             <ReportName>Header Subreport Landscape</ReportName>
             <Height>0.46875in</Height>
-            <Width>10.3125in</Width>
+            <Width>10.20418in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -608,7 +617,7 @@ FROM     ViewItemDetail</CommandText>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.3125in</Height>
+                  <Height>0.39708in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -620,7 +629,7 @@ FROM     ViewItemDetail</CommandText>
                               <TextRuns>
                                 <TextRun>
                                   <Label>StockReport</Label>
-                                  <Value>="Stock Report:  "</Value>
+                                  <Value>="Stock Report from: "</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -628,17 +637,7 @@ FROM     ViewItemDetail</CommandText>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Label>Warehouse</Label>
-                                  <Value>=Fields!ItemGroupId.Value</Value>
-                                  <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontSize>12pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                                <TextRun>
-                                  <Label>From</Label>
-                                  <Value>=" From: "</Value>
+                                  <Value xml:space="preserve"> </Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -652,11 +651,20 @@ FROM     ViewItemDetail</CommandText>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>d MMMM, yyyy</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Label>To</Label>
-                                  <Value>=" To "</Value>
+                                  <Value> to</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>MMM d, yyyy</Format>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value xml:space="preserve"> </Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -670,6 +678,32 @@ FROM     ViewItemDetail</CommandText>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>d MMM yyyy</Format>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value xml:space="preserve"> </Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>MMM d, yyyy</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>MMM d, yyyy</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1796,7 +1830,7 @@ FROM     ViewItemDetail</CommandText>
             </TablixRowHierarchy>
             <DataSetName>dsStockReport</DataSetName>
             <Top>0.57167in</Top>
-            <Height>1.0625in</Height>
+            <Height>1.14708in</Height>
             <Width>10.20418in</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -1809,7 +1843,7 @@ FROM     ViewItemDetail</CommandText>
         <Height>1.71875in</Height>
         <Style />
       </Body>
-      <Width>10.33333in</Width>
+      <Width>10.22916in</Width>
       <Page>
         <PageFooter>
           <Height>0.28125in</Height>
@@ -1823,11 +1857,66 @@ FROM     ViewItemDetail</CommandText>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>QIMERP:: Developed by: QFACE QROUP | www.qfacegroup.com| +233 543 459 509</Value>
+                      <Value>     QIMERP:: Developed by: QFACE QROUP | www.qfacegroup.com| +233 543 459 509</Value>
                       <Style>
                         <FontStyle>Italic</FontStyle>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox1</rd:DefaultName>
+              <Top>0.02118in</Top>
+              <Height>0.23264in</Height>
+              <Width>4.87535in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox4">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Label>PrintedOn</Label>
+                      <Value>="Printed on:"</Value>
+                      <Style>
+                        <FontStyle>Italic</FontStyle>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>11pt</FontSize>
+                        <Format>dddd, MMMM d, yyyy h:mm:ss tt</Format>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value xml:space="preserve">  </Value>
+                      <Style>
+                        <FontStyle>Italic</FontStyle>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>11pt</FontSize>
+                        <Format>dddd, MMMM d, yyyy h:mm:ss tt</Format>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Label>Date</Label>
+                      <Value>=Now()</Value>
+                      <Style>
+                        <FontStyle>Italic</FontStyle>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>11pt</FontSize>
+                        <Format>dddd, MMMM d, yyyy h:mm:ss tt</Format>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1837,9 +1926,11 @@ FROM     ViewItemDetail</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.02118in</Top>
+              <Top>0.0243in</Top>
+              <Left>4.94479in</Left>
               <Height>0.23264in</Height>
-              <Width>10.3125in</Width>
+              <Width>5.19791in</Width>
+              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1868,7 +1959,7 @@ FROM     ViewItemDetail</CommandText>
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="Warehouse">
+    <ReportParameter Name="WarhouseId">
       <DataType>Integer</DataType>
       <Prompt>Select Warehouse</Prompt>
       <ValidValues>
@@ -1880,15 +1971,13 @@ FROM     ViewItemDetail</CommandText>
       </ValidValues>
       <MultiValue>true</MultiValue>
     </ReportParameter>
-    <ReportParameter Name="DateTo">
-      <DataType>DateTime</DataType>
-      <Nullable>true</Nullable>
-      <Prompt>Date To</Prompt>
-    </ReportParameter>
     <ReportParameter Name="DateFrom">
       <DataType>DateTime</DataType>
-      <Nullable>true</Nullable>
       <Prompt>Date From</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DateTo">
+      <DataType>DateTime</DataType>
+      <Prompt>Date To</Prompt>
     </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
@@ -1897,19 +1986,19 @@ FROM     ViewItemDetail</CommandText>
       <NumberOfRows>2</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
-          <ColumnIndex>2</ColumnIndex>
+          <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>DateFrom</ParameterName>
+          <ParameterName>WarhouseId</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>DateTo</ParameterName>
+          <ParameterName>DateFrom</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
+          <ColumnIndex>2</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>Warehouse</ParameterName>
+          <ParameterName>DateTo</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
