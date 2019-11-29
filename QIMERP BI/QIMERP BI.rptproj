@@ -51,6 +51,7 @@
   <ItemGroup>
     <DataSet Include="dsCUSTOMER.rsd" />
     <DataSet Include="dsSHAREDCOMPANY.rsd" />
+    <DataSet Include="dsSharedWarehouse.rsd" />
     <DataSet Include="dsStaffHeader.rsd" />
   </ItemGroup>
   <ItemGroup>
